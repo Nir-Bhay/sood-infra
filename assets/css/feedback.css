@@ -1,0 +1,328 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* .faq-header {
+    width:100%;
+    height:60vh;
+    position: relative;
+    padding: 40px 20px;
+    /* background: url('/assets/images/banners/odbL34hMTeCKJq6a-egd-g-removebg-preview.png') center/cover no-repeat; */
+    color: #fff;
+    z-index: -2;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+} */
+
+.faq-header h2 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeIn 1s;
+}
+/* Introduction Section */
+#intro {
+    text-align: center;
+    padding: 20px;
+}
+
+/* FAQ Section */
+#faqs {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+#faqs h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.faq-question:hover {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    border-radius: 5px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-answer.active {
+    display: block;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+/* Smooth Dropdown */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Icon Styles */
+.fas {
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+/* Feedback Form */
+#feedback {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#feedback h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#feedback-form label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+#feedback-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#feedback-form button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Contact Information */
+#contact-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#contact-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#contact-info p,
+#social-media a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+#social-media a {
+    margin: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+#social-media a:hover {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    #faqs,
+    #feedback,
+    #contact-info {
+        padding: 10px;
+    }
+}
+
+
+
+
+/* Search Bar */
+#faq-search {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Expand/Collapse Buttons */
+#faq-controls {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+#faq-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+#faq-controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Feedback Buttons */
+.faq-feedback {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.feedback-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.feedback-btn:hover {
+    background-color: #0056b3;
+}
+
+.feedback-btn.no {
+    background-color: #dc3545;
+}
+
+.feedback-btn.no:hover {
+    background-color: #b32f39;
+}
+
+/* FAQ Categories */
+.faq-category {
+    margin-bottom: 30px;
+}
+
+.faq-category h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+

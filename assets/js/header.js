@@ -13,57 +13,71 @@ mobileNav.addEventListener("click", () => toggleNav());
 
 
 
-// Add sticky class on scroll
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        nav.classList.add("sticky");
-    } else {
-        nav.classList.remove("sticky");
+
+function toggleMenu() {
+    document.getElementById('menubar').classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+}
+
+document.addEventListener('click', function (event) {
+    const menubar = document.getElementById('menubar');
+    if (!menubar.contains(event.target) && !event.target.closest('.hamburger')) {
+        menubar.classList.remove('active');
+        document.body.classList.remove('menu-open');
     }
 });
 
-// Loading bar animation for navigation links
-document.querySelectorAll("nav ul li a").forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
 
-        // Start loading animation
-        loadingBar.style.width = "100%";
 
-        setTimeout(() => {
-            // Navigate to the link after a short delay
-            window.location.href = e.target.href;
+// JavaScript for toggling menu and positioning submenu
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-            // Reset loading bar after navigation
-            loadingBar.style.width = "0";
-        }, 400);
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (event) {
+            // Toggle display of submenu
+            const submenu = dropdown.querySelector('.submenu');
+            const isVisible = submenu.style.display === 'block';
+            closeAllSubmenus(); // Close other submenus first
+
+            if (!isVisible) {
+                // Position submenu directly below the clicked item
+                submenu.style.display = 'block';
+                const rect = dropdown.getBoundingClientRect();
+                submenu.style.top = `${rect.bottom}px`;
+                submenu.style.left = `${rect.left}px`;
+            }
+
+            event.stopPropagation();
+        });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function () {
+        closeAllSubmenus();
+    });
+
+    function closeAllSubmenus() {
+        const submenus = document.querySelectorAll('.submenu');
+        submenus.forEach(submenu => submenu.style.display = 'none');
+    }
 });
 
 
 
 
 // JavaScript code to show the scroll-to-top button and handle the smooth scroll
-document.addEventListener("DOMContentLoaded", () => {
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-    // Show the button after the user scrolls down a bit
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {  // Adjust "100" as needed
-            scrollToTopBtn.style.opacity = 1;
-            scrollToTopBtn.style.visibility = "visible";
-        } else {
-            scrollToTopBtn.style.opacity = 0;
-            scrollToTopBtn.style.visibility = "visible";
-        }
-    });
+const backToTopButton = document.getElementById('back-to-top');
 
-    // Smooth scroll to top when button is clicked
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-});
+const toggleBackToTopButton = () => {
+    backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+};
 
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// Event listeners
+window.addEventListener('scroll', toggleBackToTopButton);
+backToTopButton.addEventListener('click', scrollToTop);

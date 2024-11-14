@@ -1,9 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
     background: #000a672c;
 }
+
+
+
 
 
 
@@ -47,7 +55,7 @@ body {
 
 /* Animation effect for the hero content */
 .hero-content:hover {
-    transform: scale(1.35);
+    transform: scale(1.1);
     /* Slightly enlarges content on hover */
 }
 
@@ -139,46 +147,6 @@ body {
     text-align: center;
 }
 
-/* Testimonials Section Styling */
-.testimonials {
-    padding: 2rem;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.testimonial-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin: 1rem 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-card p {
-    font-size: 1.1rem;
-    color: #555;
-    margin: 0 0 1rem 0;
-}
-
-.testimonial-card span {
-    font-size: 1rem;
-    color: #999;
-    font-weight: bold;
-}
-
-
 
 
 
@@ -255,10 +223,12 @@ body {
     /* Center-aligns items */
     padding: 40px;
     /* Adds padding around the section */
-    background-color: #000115;
+    background-color: #ffffff;
     /* Light background for contrast */
-    color: white;
+    color: rgb(0, 0, 0);
 }
+
+
 
 .about-us h2 {
     font-size: 2rem;
@@ -483,6 +453,7 @@ body {
 
 .portfolio {
     text-align: center;
+    background-color: #fff;
 }
 
 .project-category {

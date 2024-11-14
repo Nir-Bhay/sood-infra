@@ -15,13 +15,13 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #1e229f;
     color: #fff;
     padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(18, 21, 199, 0.1);
     position: relative;
-    overflow: hidden;
+    margin-top: 10vh;
 }
 
 header::before,
@@ -430,12 +430,16 @@ footer:hover::before {
 }
 
 
+
+
+
+
 /* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
+    background: #ffffff;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -444,18 +448,23 @@ footer:hover::before {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
     transition: background-color 0.3s;
+    z-index: 50;
 }
 
 #back-to-top:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
 }
 
 #back-to-top img {
     width: 20px;
     height: 20px;
 }
+
+
+
+
 
 /* Side Social Media Bar */
 #social-bar {

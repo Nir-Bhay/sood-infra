@@ -47,4 +47,16 @@ document.getElementById('apply-form').addEventListener('submit', function (event
     });
 });
 
-const backToTopButton = document.getElementById('back-to-top'); window.addEventListener('scroll', () => { if (window.pageYOffset > 300) { backToTopButton.style.display = 'block'; } else { backToTopButton.style.display = 'none'; } }); backToTopButton.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+const backToTopButton = document.getElementById('back-to-top');
+
+const toggleBackToTopButton = () => {
+    backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+};
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// Event listeners
+window.addEventListener('scroll', toggleBackToTopButton);
+backToTopButton.addEventListener('click', scrollToTop);

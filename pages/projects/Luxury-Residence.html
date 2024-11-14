@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Contact us for inquiries, support, or project proposals. Our team is here to help with all your real estate and construction needs.">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="../assets/css/contect.css">
+    <title>Project Details - [Building Name]</title>
+    <link rel="stylesheet" href="/assets/css/project1.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
 </head>
 
 <body>
+
+
+
+
 <nav>
     <a href="index.html">
         <div class="logo">
@@ -43,7 +43,6 @@
 
             </ul>
         </li>
-        <li><a href="/pages/services.html">Service</a></li>
         <li class="dropdown">
             <a href="#">Media ⬇️</a>
             <ul class="submenu">
@@ -117,56 +116,90 @@
 </div>
 
 
-    <header class="header">
-        <h1>Contact Us</h1>
-        <p>We're here to assist with any inquiries or questions.</p>
-    </header>
 
+
+
+
+
+
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero-section">
+        <div class="carousel">
+            <img src="/assets/images/Residential Project.jpeg" alt="Project Image 1" class="carousel-image">
+            <img src="/assets/images/Residential Project.jpeg" alt="Project Image 2" class="carousel-image">
+            <img src="/assets/images/Residential Project.jpeg" alt="Project Image 3" class="carousel-image">
+        </div>
+        <div class="project-hero-content">
+            <h1>Building Name or Project Title</h1>
+            <p>Brief description about the building or project highlighting its unique qualities.</p>
+        </div>
+    </section>
+
+<!-- Project Details Section -->
+<section class="project-details">
     <div class="container">
-        <section class="contact-form">
-            <h2>Get in Touch</h2>
-            <form id="contactForm" novalidate>
-                <label for="name">Name</label>
-
-
-                <input type="text" id="name" name="name" required>
-                <small class="error" id="nameError"></small>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <small class="error" id="emailError"></small>
-
-                <label for="phone">Phone Number (optional)</label>
-                <input type="tel" id="phone" name="phone">
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-                <small class="form-success" id="formSuccess"></small>
-            </form>
-        </section>
-
-        <aside class="contact-details">
-            <h2>Our Office</h2>
-            <div class="details">
-                <p><i class="fas fa-map-marker-alt"></i> 123 Construction Ave, Suite 100, Cityville</p>
-                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@realestatecorp.com</p>
+        <h2>Project Overview</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>Intro</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit autem tempora sed ullam voluptate alias repudiandae temporibus, natus sunt libero incidunt consequuntur illo necessitatibus voluptas. Esse fuga reprehenderit quasi expedita?</p>
             </div>
-
-            <div class="social-media">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <div class="detail-item">
+                <h3>Location</h3>
+                <p>123 Main St, City, Country</p>
             </div>
-
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;"
-                    allowfullscreen="" loading="lazy"></iframe>
+            <div class="detail-item">
+                <h3>Estimated Cost</h3>
+                <p>$5,000,000</p>
             </div>
-        </aside>
+            <div class="detail-item">
+                <h3>Building Specifications</h3>
+                <ul>
+                    <li>Size: 5000 sq ft</li>
+                    <li>Floors: 5</li>
+                    <li>Style: Modern</li>
+                </ul>
+            </div>
+            <div class="detail-item">
+                <h3>Team & Labor</h3>
+                <p>Architect: John Doe <br> Contractors: ABC Builders <br> Laborers: 50+</p>
+            </div>
+        </div>
     </div>
+</section>
+    <!-- Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-row">
+                <img src="/assets/images/Residential Project.jpeg" alt="Gallery Image 1">
+                <img src="/assets/images/Residential Project.jpeg" alt="Gallery Image 2">
+                <img src="/assets/images/Residential Project.jpeg" alt="Gallery Image 3">
+                <img src="/assets/images/Residential Project.jpeg" alt="Gallery Image 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="additional-info">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>An in-depth description of the project, detailing the inspiration behind the design, materials used, and
+                specific architectural or construction challenges addressed.</p>
+            <h3>Timeline & Milestones</h3>
+            <ul>
+                <li>Design Phase: Q1 2023</li>
+                <li>Construction Phase: Q2-Q4 2023</li>
+                <li>Completion: Q1 2024</li>
+            </ul>
+            <h3>Project Location</h3>
+            <iframe src="https://maps.google.com/maps?q=123%20Main%20St,%20City,%20Country&z=15&output=embed"
+                class="project-map"></iframe>
+        </div>
+    </section>
+
+
 
 <footer>
     <div class="footer-container">
@@ -212,12 +245,29 @@
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </div>
 </footer>
+
 <!-- Back to Top Button -->
 <button id="back-to-top"><img src="/assets/images/banners/up_arrow.png" alt="Up"></button>
 
+<script src="/assets/js/header.js"></script>
 
-    <script src="../assets/js/contect.js"></script>
-  <script src="/assets/js/header.js"></script>
+
+
+
+
+
+<script>// Simple image carousel logic
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000);
+</script>
 </body>
 
 </html>

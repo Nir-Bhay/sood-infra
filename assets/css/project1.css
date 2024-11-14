@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 15vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.project-hero-content h1 {
+  font-size: 2.5rem;
+}
+
+/* Project Details Section */
+.project-details {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.detail-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.detail-item p,
+.detail-item ul {
+  margin: 5px 0;
+}
+
+/* Gallery Section */
+.project-gallery {
+  padding: 40px 20px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-row img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Additional Information */
+.additional-info {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.project-map {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section .carousel-image {
+    height: 40vh;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+}

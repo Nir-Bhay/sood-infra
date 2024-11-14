@@ -227,3 +227,6 @@ body {
         transform: translateY(0);
     }
 }
+footer{
+    background: #000;
+}

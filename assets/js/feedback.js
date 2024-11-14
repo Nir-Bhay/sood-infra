@@ -1,3 +1,40 @@
+
+
+
+
+document.getElementById('search-bar').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question').textContent.toLowerCase();
+        item.style.display = question.includes(query) ? 'block' : 'none';
+    });
+});
+
+document.getElementById('expand-all').addEventListener('click', () => {
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.classList.add('active');
+    });
+});
+
+document.getElementById('collapse-all').addEventListener('click', () => {
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.classList.remove('active');
+    });
+});
+document.querySelectorAll('.feedback-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        alert('Thank you for your feedback!');
+    });
+});
+
+
+
+
+
+
+
+
+
 // FAQ Expand/Collapse Functionality
 document.querySelectorAll('.faq-question').forEach((question) => {
     question.addEventListener('click', () => {
@@ -41,3 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transform = 'translateY(0)';
     });
 });
+

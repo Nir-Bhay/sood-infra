@@ -16,17 +16,17 @@
 const pastProjects = [
     {
         title: "Completed Residential Project",
-        imgUrl: "images/Residential Project.jpeg",
+        imgUrl: "/assets/images/Residential Project.jpeg",
         description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
     },
     {
         title: "Commercial Office Building",
-        imgUrl: "images/Commercial Project.jpeg",
+        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
         description: "High-tech commercial spaces with sustainable architecture, offering state-of-the-art facilities. Designed to foster productivity and collaboration among businesses, this building incorporates green technologies."
     },
     {
         title: "Green Energy Housing",
-        imgUrl: "images/Residential Project.jpeg",
+        imgUrl: "/assets/images/Residential Project.jpeg",
         description: "Eco-friendly housing utilizing solar energy and sustainable materials. This community aims to minimize environmental impact while providing comfortable living spaces."
     }
     // ,
@@ -49,19 +49,19 @@ const pastProjects = [
 
 const ongoingProjects = [
     {
-        title: "Mixed-Use Development",
-        imgUrl: "images/Mixed-Use Development.jpeg",
-        description: "A versatile mixed-use project in an urban area, combining residential, commercial, and recreational spaces to promote a vibrant community."
+        title: "Completed Residential Project",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
     },
     {
-        title: "Luxury Apartment Complex",
-        imgUrl: "images/Luxury Apartment Complex.jpeg",
-        description: "Exclusive apartments with state-of-the-art amenities, designed for urban living at its finest, including fitness centers, pools, and community lounges."
+        title: "Commercial Office Building",
+        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
+        description: "High-tech commercial spaces with sustainable architecture, offering state-of-the-art facilities. Designed to foster productivity and collaboration among businesses, this building incorporates green technologies."
     },
     {
-        title: "Seaside Resort Development",
-        imgUrl: "images/Mixed-Use Development.jpeg",
-        description: "A resort development by the seaside with eco-friendly designs, offering stunning ocean views and an immersive natural experience."
+        title: "Green Energy Housing",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "Eco-friendly housing utilizing solar energy and sustainable materials. This community aims to minimize environmental impact while providing comfortable living spaces."
     }
     // ,
     // {
@@ -83,35 +83,35 @@ const ongoingProjects = [
 
 const futureProjects = [
     {
-        title: "Urban Park Design",
-        imgUrl: "images/Urban Park Design.jpeg",
-        description: "An eco-friendly park design with community-focused areas, aimed at enhancing green space in urban settings and promoting outdoor activities."
+        title: "Completed Residential Project",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
     },
     {
-        title: "Upcoming Commercial Retail Space",
-        imgUrl: "images/Luxury Apartment Complex.jpeg",
-        description: "Prime retail spaces with modern facilities designed to attract leading brands and provide a hub for local commerce."
+        title: "Commercial Office Building",
+        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
+        description: "High-tech commercial spaces with sustainable architecture, offering state-of-the-art facilities. Designed to foster productivity and collaboration among businesses, this building incorporates green technologies."
     },
     {
-        title: "High-Rise Business Center",
-        imgUrl: "images/Mixed-Use Development.jpeg",
-        description: "A high-rise business center catering to corporate needs, featuring flexible office spaces and amenities to support various business operations."
+        title: "Green Energy Housing",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "Eco-friendly housing utilizing solar energy and sustainable materials. This community aims to minimize environmental impact while providing comfortable living spaces."
     }
     ,
     {
-        title: "Smart City Infrastructure",
-        imgUrl: "images/Commercial Project.jpeg",
-        description: "Advanced infrastructure for a smart city project, integrating technology to improve urban management and enhance the quality of life for residents."
+        title: "Completed Residential Project",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
     },
     {
-        title: "Sustainable Farm Complex",
-        imgUrl: "images/Urban Park Design.jpeg",
-        description: "An agricultural complex designed for sustainability and community use, promoting local food production and environmental education."
+        title: "Commercial Office Building",
+        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
+        description: "High-tech commercial spaces with sustainable architecture, offering state-of-the-art facilities. Designed to foster productivity and collaboration among businesses, this building incorporates green technologies."
     },
     {
-        title: "Waterfront Recreation Area",
-        imgUrl: "images/Luxury Apartment Complex.jpeg",
-        description: "A waterfront area designed for recreation and environmental education, providing access to nature and promoting community engagement."
+        title: "Green Energy Housing",
+        imgUrl: "/assets/images/Residential Project.jpeg",
+        description: "Eco-friendly housing utilizing solar energy and sustainable materials. This community aims to minimize environmental impact while providing comfortable living spaces."
     }
 ];
 
@@ -137,3 +137,7 @@ const renderProjects = (projects, containerId) => {
 renderProjects(pastProjects, 'past-projects-gallery');
 renderProjects(ongoingProjects, 'ongoing-projects-gallery');
 renderProjects(futureProjects, 'future-projects-gallery');
+
+
+
+

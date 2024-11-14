@@ -19,12 +19,13 @@ body {
     margin: 0 auto;
 }
 
-.header,
-.footer {
+.header {
     text-align: center;
     padding: 1em;
-    background-color: #003f5c;
+    background-color: #1e229f;
     color: white;
+    text-align: center;
+    margin-top: 15vh;
 }
 
 .header h1 {

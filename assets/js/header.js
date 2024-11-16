@@ -1,72 +1,63 @@
-const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".menubar");
-const nav = document.querySelector("nav");
-const loadingBar = document.getElementById("loading-bar");
-
-const toggleNav = () => {
-    navbar.classList.toggle("active");
-    mobileNav.classList.toggle("hamburger-active");
-};
-
-mobileNav.addEventListener("click", () => toggleNav());
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  
+    const preloader = document.querySelector('.preloader');
 
+  
 
-
-function toggleMenu() {
-    document.getElementById('menubar').classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-}
-
-document.addEventListener('click', function (event) {
-    const menubar = document.getElementById('menubar');
-    if (!menubar.contains(event.target) && !event.target.closest('.hamburger')) {
-        menubar.classList.remove('active');
-        document.body.classList.remove('menu-open');
-    }
-});
-
-
-
-// JavaScript for toggling menu and positioning submenu
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function (event) {
-            // Toggle display of submenu
-            const submenu = dropdown.querySelector('.submenu');
-            const isVisible = submenu.style.display === 'block';
-            closeAllSubmenus(); // Close other submenus first
-
-            if (!isVisible) {
-                // Position submenu directly below the clicked item
-                submenu.style.display = 'block';
-                const rect = dropdown.getBoundingClientRect();
-                submenu.style.top = `${rect.bottom}px`;
-                submenu.style.left = `${rect.left}px`;
-            }
-
-            event.stopPropagation();
+    // Simulate loading with preloader
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            preloader.classList.add('active');
+            setTimeout(() => {
+                preloader.classList.remove('active');
+                window.location.href = e.target.href;
+            }, 1000); // Adjust delay as needed
         });
     });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function () {
-        closeAllSubmenus();
-    });
-
-    function closeAllSubmenus() {
-        const submenus = document.querySelectorAll('.submenu');
-        submenus.forEach(submenu => submenu.style.display = 'none');
-    }
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const menubar = document.querySelector('.menubar');
+
+    // Toggle Menubar
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger-active');
+        menubar.classList.toggle('active');
+    });
+
+    // Close menubar when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !menubar.contains(e.target)) {
+            hamburger.classList.remove('hamburger-active');
+            menubar.classList.remove('active');
+        }
+    });
+
+    // Toggle Submenu in Menubar (click event for mobile)
+    const submenuToggles = document.querySelectorAll('[data-toggle="submenu"]');
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent navigation
+            const parent = toggle.parentElement;
+            const submenu = parent.querySelector('.submenu');
+            if (submenu) {
+                submenu.classList.toggle('active');
+                const icon = toggle.querySelector('.dropdown-icon');
+                if (icon) {
+                    icon.classList.toggle('rotated');
+                }
+            }
+        });
+    });
+});
 
 
-// JavaScript code to show the scroll-to-top button and handle the smooth scroll
+// // JavaScript code to show the scroll-to-top button and handle the smooth scroll
 
 const backToTopButton = document.getElementById('back-to-top');
 

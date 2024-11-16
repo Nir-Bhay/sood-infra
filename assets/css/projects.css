@@ -17,9 +17,10 @@ body {
   text-align: center;
   padding: 3rem 1rem;
   /* background: linear-gradient(to right, #e63946, #f4a261); */
-   background-color: #1e229f;
-  color: #fff;
+   background-color: #00000000;
+  color: #000000;
   margin-top: 10vh;
+  
 }
 
 .projects-header h1 {
@@ -30,7 +31,7 @@ body {
 
 .projects-header p {
   font-size: 1.2rem;
-  color: #f0e7db;
+  color: #414141;
 }
 
 /* Project Categories */

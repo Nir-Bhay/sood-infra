@@ -16,6 +16,7 @@ body {
 
 
 .hero {
+  
     background-image: url('/assets/images/9f8024_f28136fc311f4698950b935d1b322507~mv2.bak.webp');
     background-size: cover;
     background-position: center center;
@@ -83,29 +84,37 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh;
+        margin-top:10vh;
+        height: 60vh;
         /* Adjusts height for smaller screens */
     }
-
+.hero-content{
+    padding: 5px;
+}
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
         /* Smaller heading size for mobile */
     }
 
     .btn {
-        padding: 8px 16px;
+        padding: 4px 8px;
         /* Adjusts button padding */
     }
+    .hero-content:hover {
+    transform: scale(0.8);
+    /* Slightly enlarges content on hover */
+}
 }
 
 @media (max-width: 480px) {
     .hero {
+         margin-top:10vh;
         height: 40vh;
         /* Further adjusts height for very small screens */
     }
 
     .hero-content h1 {
-        font-size: 1.5rem;
+        font-size: 1;
         /* Further reduces heading size */
     }
 }

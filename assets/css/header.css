@@ -30,7 +30,7 @@ nav {
 }
 
 nav .logo img {
-    height: 65px;
+    height: 55px;
     width: auto;
 }
 
@@ -227,6 +227,9 @@ body.mobile-active {
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+          padding: 10px 10px;
+    }
     nav ul {
         display: none;
     }
@@ -294,61 +297,43 @@ body.mobile-active {
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    z-index: 100;
+    gap: 12px;
+    z-index: 1000;
 }
 
+/* Icon Container */
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: transparent;
     border-radius: 50%;
-    background-color: #33333300;
+    background-color: #000; /* Black background */
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Social Icon Specific Colors */
-.social-icon.facebook {
-    background-color: #3b589800;
-}
-
-.social-icon.twitter {
-    background-color: #1da0f200;
-}
-
-.social-icon.instagram {
-    background-color: #e4405e00;
-}
-
-.social-icon.linkedin {
-    background-color: #0076b500;
-}
-
-/* Icon SVG styling */
-.social-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
+/* Icon SVG Styling */
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Ensures white icons on black background */
     transition: transform 0.3s ease;
 }
 
 /* Hover Effects */
 .social-icon:hover {
-    opacity: 0.9;
     transform: translateX(5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
-.social-icon:hover svg {
+.social-icon:hover img {
     transform: scale(1.1);
 }
 
-/* Animation for when the icons appear */
+/* Animation for the icons appearing */
 .social-icons {
     animation: slideIn 1s ease-out forwards;
 }
@@ -364,6 +349,34 @@ body.mobile-active {
     }
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .social-icons {
+        /* top: 85%; Move icons to bottom for better visibility */
+        /* left: 50%; */
+        transform: translate(-50%, -50%);
+        flex-direction: column; /* Align icons in a row */
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Ensuring fixed position on all screens */
+@media (max-height: 500px) {
+    .social-icons {
+        top: auto;
+        bottom: 10px; /* Adjust for very small screens */
+    }
+}
 
 
 .dropdown-icon {
@@ -408,7 +421,7 @@ body.mobile-active {
 
 .menubar .logo img {
     max-width: 150px; /* Adjust this value based on your logo's size */
-    height: auto;
+    height: 50px;
     object-fit: contain; /* Ensures logo maintains aspect ratio */
 }
 

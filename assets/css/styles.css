@@ -17,10 +17,11 @@ body {
 
 .hero {
   
-    background-image: url('/assets/images/9f8024_f28136fc311f4698950b935d1b322507~mv2.bak.webp');
+    background-image: url('/assets/images/projects/Sood Infra , construction , Soodinfra office.webp');
     background-size: cover;
     background-position: center center;
-    height: 100vh; /* Adjust height to full screen */
+    height: 100vh;
+     /* Adjust height to full screen */
     padding: 5rem 0; /* Adds padding on top and bottom for some distance */
     display: flex;
     align-items: center; /* Centers content vertically */
@@ -37,6 +38,7 @@ body {
     position: relative;
     /* Allows for absolute positioning */
     z-index: 2;
+
     /* Ensures content is above the background */
     padding: 20px;
     /* Adds padding */
@@ -92,7 +94,7 @@ body {
     padding: 5px;
 }
     .hero-content h1 {
-        font-size: 1.2rem;
+        font-size:0.5rem;
         /* Smaller heading size for mobile */
     }
 
@@ -117,6 +119,7 @@ body {
         font-size: 1;
         /* Further reduces heading size */
     }
+    
 }
 
 /* Keyframes for fade-in animation */
@@ -270,7 +273,7 @@ body {
 .about-us-image {
     margin-top: 30px;
     /* Space above the image */
-    max-width: 100%;
+    max-width: 32%;
     /* Image responsive */
     text-align: center;
     /* Center-aligns image */
@@ -863,9 +866,14 @@ footer a:hover {
         gap: 0.5rem;
         margin-top: 1rem;
     }
+.hero-content {
+ 
+  /* font-size: 12px; */
+
+}
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size:12px;
     }
 
     .about-preview,

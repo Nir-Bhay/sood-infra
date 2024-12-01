@@ -15,3 +15,27 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+    const revealOnScroll = function () {
+        for (let i = 0; i < scrollRevealElements.length; i++) {
+            const element = scrollRevealElements[i];
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.75) {
+                element.classList.add('revealed');
+            }
+        }
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check on page load
+});
+
+
+

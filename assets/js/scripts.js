@@ -16,12 +16,12 @@
 const pastProjects = [
     {
         title: "Completed Residential Project",
-        imgUrl: "/assets/images/Residential Project.jpeg",
+        imgUrl: "/assets/images/blog/20240703_110250.jpg",
         description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
     },
     {
-        title: "Commercial Office Building",
-        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
+        title: "Commercial Office Bu/ilding",
+        imgUrl: "assets/images/blog/Brown And Orange Modern Home Building Services Instagram Post (1).png",
         description: "High-tech commercial spaces with sustainable architecture, offering state-of-the-art facilities. Designed to foster productivity and collaboration among businesses, this building incorporates green technologies."
     },
     {
@@ -49,9 +49,9 @@ const pastProjects = [
 
 const ongoingProjects = [
     {
-        title: "Completed Residential Project",
-        imgUrl: "/assets/images/Residential Project.jpeg",
-        description: "A modern residential project completed with a focus on aesthetics and functionality. This project features spacious interiors, eco-friendly materials, and a design that harmonizes with the natural environment."
+        title: " Shri Naveen Chambers",
+        imgUrl: "/assets/images/projects/Sood Infra , construction , Soodinfra office.webp",
+        description: "Located on the Nagpur-Chhindwara Highway, ensuring high visibility and easy accessibility."
     },
     {
         title: "Commercial Office Building",

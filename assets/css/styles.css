@@ -13,129 +13,152 @@ body {
 
 
 
-
-
 .hero {
-  
     background-image: url('/assets/images/projects/Sood Infra , construction , Soodinfra office.webp');
     background-size: cover;
     background-position: center center;
     height: 100vh;
-     /* Adjust height to full screen */
-    padding: 5rem 0; /* Adds padding on top and bottom for some distance */
+    padding: 0;
     display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Hides content that overflows */
-    border-radius: 20px; /* Adds rounded corners to the section */
+    overflow: hidden;
+    /* border-radius: 20px; */
+}
+
+/* Overlay for a smooth dark effect */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 20px;
 }
 
 /* Hero content styling */
 .hero-content {
     position: relative;
-    /* Allows for absolute positioning */
     z-index: 2;
-
-    /* Ensures content is above the background */
-    padding: 20px;
-    /* Adds padding */
-    transition: transform 0.5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.495);
-    color: #ffffff;
-    /* Smooth transformation */
+    padding: 30px;
+    max-width: 80%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
-/* Animation effect for the hero content */
-.hero-content:hover {
-    transform: scale(1.1);
-    /* Slightly enlarges content on hover */
+/* Animation effect for fading and moving the content up */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    /* Main heading size */
-    animation: fadeIn 1s ease-in;
-    /* Fades in the heading */
+/* Hero content heading */
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
 }
 
-.btn {
-    background-color: #000000;
-    /* Button background color */
-    color: white;
-    /* Button text color */
-    padding: 10px 20px;
-    /* Button padding */
+/* Hero content paragraph */
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 1s forwards;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hover animation for the button */
+.btnn {
+    background-color: #0e54e1;
+    color: rgb(255, 255, 255);
+    padding: 12px 30px;
+    font-size: 1.1rem;
     text-decoration: none;
-    /* Removes underline */
     border-radius: 5px;
-    /* Rounds button corners */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Smooth transitions */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn:hover {
+.btnn:hover {
     background-color: #0056b3;
-    /* Darker color on hover */
     transform: translateY(-2px);
-    /* Moves the button slightly up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
-        margin-top:10vh;
+        margin-top: 10vh;
         height: 60vh;
-        /* Adjusts height for smaller screens */
     }
-.hero-content{
-    padding: 5px;
-}
-    .hero-content h1 {
-        font-size:0.5rem;
-        /* Smaller heading size for mobile */
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .btn {
-        padding: 4px 8px;
-        /* Adjusts button padding */
+        padding: 5px 15px;
+        font-size: 1rem;
     }
-    .hero-content:hover {
-    transform: scale(0.8);
-    /* Slightly enlarges content on hover */
-}
 }
 
 @media (max-width: 480px) {
     .hero {
-         margin-top:10vh;
-        height: 40vh;
-        /* Further adjusts height for very small screens */
+        margin-top: 10vh;
+        height: 50vh;
     }
 
-    .hero-content h1 {
-        font-size: 1;
-        /* Further reduces heading size */
+    .hero-content h2 {
+        font-size: 1.5rem;
     }
-    
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+        .btnn {
+           
+            padding: 3px 15px;
+            font-size: 0.9rem;
+           
+        }
 }
 
-/* Keyframes for fade-in animation */
+/* Keyframe for fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        /* Start fully transparent */
-        transform: translateY(20px);
-        /* Start from below */
     }
 
     to {
         opacity: 1;
-        /* End fully opaque */
-        transform: translateY(0);
-        /* End in place */
     }
 }
 
@@ -325,6 +348,35 @@ body {
         font-size: 1rem;
         /* Smaller paragraph size for mobile */
     }
+        .about-us-image {
+            margin-top: 30px;
+            /* Space above the image */
+            max-width: 100%;
+            /* Image responsive */
+            text-align: center;
+            /* Center-aligns image */
+            overflow: hidden;
+            /* Ensures the image does not overflow its container */
+            border-radius: 10px;
+            /* Rounds image corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Adds a subtle shadow for depth */
+            margin-left: 20px;
+        }
+    
+        .about-us-image img {
+            width: 100%;
+            /* Makes image fill its container */
+            height: auto;
+            /* Maintains aspect ratio */
+            transition: transform 0.3s ease;
+            /* Smooth transition for the transform property */
+        }
+    
+        .about-us-image img:hover {
+            transform: scale(1.1);
+            /* Zoom effect on hover */
+        }
 }
 
 
@@ -473,7 +525,7 @@ body {
 
 .portfolio-item {
     position: relative;
-    flex: 1 1 30%;
+    flex: 1 1 25%;
     margin: 1rem;
     border-radius: 8px;
     overflow: hidden;
@@ -488,7 +540,7 @@ body {
 
 .portfolio-item img {
     margin-top: 10px;
-    width: 100%;
+    width: 80%;
     height: auto;
     transition: transform 0.3s;
 }
@@ -866,15 +918,7 @@ footer a:hover {
         gap: 0.5rem;
         margin-top: 1rem;
     }
-.hero-content {
- 
-  /* font-size: 12px; */
 
-}
-
-    .hero-content h1 {
-        font-size:12px;
-    }
 
     .about-preview,
     .services,

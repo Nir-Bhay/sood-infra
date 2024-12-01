@@ -58,62 +58,119 @@ body {
   transform: scale(1.1);
 }
 
-/* Project Gallery */
+/* General Styling */
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .project-card {
   position: relative;
-  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.project-card img {
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image {
   width: 100%;
-  height: auto;
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.05);
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: opacity 0.3s ease;
 }
 
 .project-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
+  padding: 1.5rem;
+  text-align: center;
 }
 
-.project-card:hover .project-info {
-  transform: translateY(0);
-}
-
-/* Project Info Text */
 .project-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
 .project-info p {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.8rem;
 }
+
+.view-details {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+  background-color: #0056b3;
+}
+
+.view-details:focus {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-gallery {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-info p {
+    font-size: 0.8rem;
+  }
+
+  .view-details {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Call to Action */
 .cta {

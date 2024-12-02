@@ -38,6 +38,7 @@ body {
   padding: 80px 5%;
   background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
   overflow: hidden;
+  margin-top:10vh;
 }
 
 .hero-content {
@@ -101,13 +102,14 @@ body {
   animation: fadeInRight 1.5s ease-in-out;
 }
 
-.hero-img {
+.hero-video {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
 
+/* Fade-in animation */
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -126,6 +128,7 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 60px 5%;
+    margin-top: 5vh;
   }
 
   .hero-content,

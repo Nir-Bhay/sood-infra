@@ -39,7 +39,7 @@ body {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 /* Hero content styling */
@@ -133,6 +133,7 @@ body {
     .hero {
         margin-top: 10vh;
         height: 50vh;
+        border-radius: 0;
     }
 
     .hero-content h2 {
@@ -378,23 +379,34 @@ body {
         transform: translateX(0);
     }
 }
-/* Apply Animation */
-.about-us h2, .about-us p {
-    animation: fadeInUp 1s ease-in-out;
+/* Styling for animations */
+.about-us h2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.about-us p {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.3s;
 }
 
 .about-highlights li {
     opacity: 0;
     animation: fadeInUp 0.8s ease-in-out forwards;
-    animation-delay: calc(0.2s * var(--i)); /* Cascading effect */
+    animation-delay: calc(0.2s * var(--i)); /* Cascading effect for list */
 }
 
 .about-us-image img {
-    animation: slideInFromRight 1.2s ease-in-out;
+    opacity: 0;
+    animation: slideInFromRight 1.2s ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
 .about-cta {
-    animation: slideInFromLeft 1.2s ease-in-out;
+    opacity: 0;
+    animation: slideInFromLeft 1.2s ease-in-out forwards;
+    animation-delay: 0.7s;
 }
 
 

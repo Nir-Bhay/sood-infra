@@ -240,148 +240,162 @@ body {
 }
 
 
-
+/* About Us Section */
 .about-us {
-    display: flex;
-    /* Flexbox for layout */
-    flex-direction: column;
-    /* Stack elements vertically on small screens */
-    align-items: center;
-    /* Center-aligns items */
-    padding: 40px;
-    /* Adds padding around the section */
-    background-color: #ffffff;
-    /* Light background for contrast */
-    color: rgb(0, 0, 0);
-}
-
-
-
-.about-us h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-}
-
-
-
-.aboutview {
-    display: flex;
-    flex-direction: row;
-}
-
-.about-us-content {
-    max-width: 800px;
-    /* Limits content width for readability */
+    background: #f9f9f9;
+    padding: 60px 20px;
     text-align: center;
-    /* Center-aligns text */
-    width: 70%;
 }
 
-.about-us h2 {
-    font-size: 2.5rem;
-    /* Larger font size for heading */
+.about-us-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-us-text h2 {
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
-    /* Adds space below heading */
 }
 
-.about-us p {
-    font-size: 1.2rem;
-    /* Standard paragraph size */
-    margin-bottom: 15px;
+.about-us-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
 
-    /* Adds space below paragraphs */
+.about-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #333;
+}
+
+.about-highlights li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-highlights li::before {
+    content: '✓';
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.about-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.about-cta:hover {
+    background: #cc0000;
 }
 
 .about-us-image {
-    margin-top: 30px;
-    /* Space above the image */
-    max-width: 32%;
-    /* Image responsive */
-    text-align: center;
-    /* Center-aligns image */
+    flex: 1;
+    max-width: 450px;
     overflow: hidden;
-    /* Ensures the image does not overflow its container */
     border-radius: 10px;
-    /* Rounds image corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Adds a subtle shadow for depth */
-    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-us-image img {
     width: 100%;
-    /* Makes image fill its container */
     height: auto;
-    /* Maintains aspect ratio */
     transition: transform 0.3s ease;
-    /* Smooth transition for the transform property */
 }
 
 .about-us-image img:hover {
-    transform: scale(1.1);
-    /* Zoom effect on hover */
+    transform: scale(1.05);
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .about-us {
-        padding: 20px;
-        /* Less padding on smaller screens */
-    }
-
-    .about-us-content {
-        width: 100%;
-    }
-
-    .aboutview {
-        /* display: flex; */
+    .about-us-wrapper {
         flex-direction: column;
     }
 
-    .about-us h2 {
-        font-size: 2rem;
-        /* Smaller heading size for mobile */
+    .about-us-text {
+        text-align: center;
+        padding: 0;
     }
-
-    .about-us p {
-        font-size: 1rem;
-        /* Smaller paragraph size for mobile */
-    }
-        .about-us-image {
-            margin-top: 30px;
-            /* Space above the image */
-            max-width: 100%;
-            /* Image responsive */
-            text-align: center;
-            /* Center-aligns image */
-            overflow: hidden;
-            /* Ensures the image does not overflow its container */
-            border-radius: 10px;
-            /* Rounds image corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            /* Adds a subtle shadow for depth */
-            margin-left: 20px;
-        }
-    
-        .about-us-image img {
-            width: 100%;
-            /* Makes image fill its container */
-            height: auto;
-            /* Maintains aspect ratio */
-            transition: transform 0.3s ease;
-            /* Smooth transition for the transform property */
-        }
-    
-        .about-us-image img:hover {
-            transform: scale(1.1);
-            /* Zoom effect on hover */
-        }
 }
 
 
 
+/* Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Apply Animation */
+.about-us h2, .about-us p {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-highlights li {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: calc(0.2s * var(--i)); /* Cascading effect */
+}
+
+.about-us-image img {
+    animation: slideInFromRight 1.2s ease-in-out;
+}
+
+.about-cta {
+    animation: slideInFromLeft 1.2s ease-in-out;
+}
 
 
 

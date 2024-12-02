@@ -230,7 +230,7 @@ section p {
   height: 60px;
   margin: 0 auto 15px;
   border-radius: 50%;
-  background: #0a74da;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,149 +518,168 @@ section p {
 
 /* Leadership Section */
 /* Leadership Section */
-.leadership {
-  padding: 3rem 2rem;
-  background-color: #f8f8f8;
-  text-align: center;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
-}
-
-/* Title */
-.leadership h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
   color: #333;
-  position: relative;
-  animation: slideIn 1.2s ease-out;
+  margin: 0;
+  padding: 0;
 }
 
-/* Animation for title */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h2 {
+  text-align: center;
+  margin: 1em 0;
+  color: #003366;
 }
 
-/* Introduction text */
-.leadership .intro {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+#management, #team {
+  padding: 2em;
 }
 
-/* Cards container */
-.leadership .leader-cards {
+.management-card, .team-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.management-card img, .team-card img {
+  width: 250px;
+  height: auto;
+  /* border-radius: 50%; */
+  margin-right: 1.5em;
+}
+
+.details {
+  max-width: 600px;
+}
+
+.team-card {
+  text-align: center;
+  flex-direction: column;
+}
+
+.team-card img {
+  margin: 0 auto 1em;
+}
+/* General Section Styles */
+#team {
+  padding: 3em 2em;
+  background-color: #f5f7fa;
+}
+
+#team h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Management Team Card Layout */
+.team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 1.5em;
 }
 
-/* Individual card styling */
-.leadership .card {
+.team-card {
   background: #fff;
-  color: #333;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 500px;
-  flex: 1 1 calc(33.333% - 30px);
-  margin-bottom: 2rem;
-  animation: fadeInUp 0.8s ease-in-out;
+  text-align: center;
+  width: 300px;
+  padding: 1.5em;
 }
 
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-/* Animation for cards */
-@keyframes fadeInUp {
+/* Image Styling */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border: 3px solid #003366;
+}
+
+/* Text Styling */
+.team-card h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 0.5em;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.team-card strong {
+  display: block;
+  font-size: 1rem;
+  color: #0066cc;
+  margin-bottom: 0.5em;
+}
+
+/* Social Icons */
+.team-card .social-links {
+  margin-top: 1em;
+}
+
+.team-card .social-links a {
+  color: #0066cc;
+  font-size: 1.2rem;
+  margin: 0 0.5em;
+  transition: color 0.3s ease;
+}
+
+.team-card .social-links a:hover {
+  color: #003366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
+  }
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Card hover effect */
-.leadership .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Card title */
-.leadership .card h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-/* Card description */
-.leadership .card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-/* Leader image styling */
-.leadership .leader-image {
-  width: 150px;
-  height: 210px;
-  /* border-radius: 50%; */
-  object-fit:fill;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-/* Image hover effect */
-.leadership .card:hover .leader-image {
-  transform: scale(1.1);
-}
-
-/* Social links */
-.leadership .social-links a {
-  display: inline-block;
-  margin: 0.5rem;
-  color: #0077b5;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-/* Social links hover effect */
-.leadership .social-links a:hover {
-  color: #0a66c2;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .leadership .card {
-    flex: 1 1 calc(50% - 30px);
-  }
-}
-
 @media (max-width: 768px) {
-  .leadership .card {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .management-card, .team-card {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .leadership h2 {
-    font-size: 2rem;
-  }
-
-  .leadership .intro {
-    font-size: 1.1rem;
+  .management-card img {
+    margin: 0 auto 1em;
   }
 }
 

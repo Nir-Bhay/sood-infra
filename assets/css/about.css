@@ -10,7 +10,7 @@
   --secondary-bg: #f7f7f7;
   --text-color: #333333;
   --secondary-text: #666666;
-  --accent-color: #4a90e2;
+  --accen-color: #4a90e2;
   --transition-speed: 0.3s;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
@@ -80,15 +80,15 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
+  background-color: var(--accen-color);
   color: var(--primary-bg);
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accen-color);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  color: var(--accen-color);
+  border: 2px solid var(--accen-color);
 }
 
 .btn:hover {
@@ -198,6 +198,16 @@ section p {
 }
 
 /* Our Story Section */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #1e90ff;
+  --accent-color: #ffcc00;
+  --neutral-white: #ffffff;
+  --text-color: #333333;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --milestone-hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
 .story .timeline {
   display: flex;
   align-items: center;
@@ -205,27 +215,42 @@ section p {
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px;
-  background: #f7f7f7;
+  background: var(--neutral-white);
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow: hidden;
 }
 
 .story .milestone {
-  background: #ffffff;
-  color: #333;
+  background: var(--neutral-white);
+  color: var(--text-color);
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-basis: calc(30% - 20px);
   position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.story .milestone:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.story .milestone:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.story .milestone:nth-child(5) {
+  animation-delay: 0.6s;
 }
 
 .story .milestone:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--milestone-hover-shadow);
 }
 
 .story .milestone .icon {
@@ -233,11 +258,11 @@ section p {
   height: 60px;
   margin: 0 auto 15px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--neutral-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .story .milestone .icon img {
@@ -248,27 +273,26 @@ section p {
 .story .milestone h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--primary-color);
 }
 
 .story .milestone p {
   font-size: 1rem;
-  color: #555;
+  color: var(--text-color);
 }
 
-/* Timeline Divider */
 .story .divider {
   position: relative;
   flex-basis: 5%;
   height: 2px;
-  background: #ccc;
+  background: var(--secondary-color);
   align-self: center;
 }
 
 .story .divider span {
   width: 15px;
   height: 15px;
-  background: #0a74da;
+  background: var(--accent-color);
   position: absolute;
   top: -6px;
   left: 50%;
@@ -276,19 +300,15 @@ section p {
   border-radius: 50%;
 }
 
-/* Animations */
-@keyframes fadeIn {
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(50px);
   }
-
   to {
     opacity: 1;
+    transform: translateY(0);
   }
-}
-
-.story .timeline {
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -306,6 +326,7 @@ section p {
     display: none;
   }
 }
+
 /* Section Headings */
 
 

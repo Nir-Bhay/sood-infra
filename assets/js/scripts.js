@@ -73,7 +73,7 @@ const renderProjects = (projects, containerId) => {
 
 renderProjects(pastProjects, 'past-projects-gallery');
 renderProjects(ongoingProjects, 'ongoing-projects-gallery');
-renderProjects(futureProjects, 'future-projects-gallery');
+// renderProjects(futureProjects, 'future-projects-gallery');
 
 
 

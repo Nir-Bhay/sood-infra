@@ -15,19 +15,19 @@
 
 const pastProjects = [
     {
-        title: "Luxury Residential Township",
-        imgUrl: "/assets/images/blog/20240703_110250.jpg",
-        description: "An expansive residential township featuring eco-friendly materials, modern design, and an emphasis on comfort. The project showcases sustainable living with lush green spaces and community amenities."
+        title: "Anuradha Walk Street",
+        imgUrl: "/assets/images/projects/anuradha_walk_street.jpg",
+        description: "A vibrant commercial project with pedestrian-friendly design, retail shops, and dining outlets. Anuradha Walk Street creates a unique urban experience with a blend of leisure and business opportunities."
     },
     {
-        title: "Corporate Tower Construction",
-        imgUrl: "assets/images/blog/Brown And Orange Modern Home Building Services Instagram Post (1).png",
-        description: "A state-of-the-art corporate building with energy-efficient designs and premium office spaces. Tailored for businesses seeking innovative, collaborative environments."
+        title: "Shri Omkaar Towers",
+        imgUrl: "/assets/images/projects/shri_omkaar_towers.jpg",
+        description: "An iconic high-rise residential and commercial project with stunning architecture, premium facilities, and panoramic city views. Shri Omkaar Towers exemplify modern living and business spaces."
     },
     {
-        title: "Eco-Conscious Housing Project",
-        imgUrl: "/assets/images/Residential Project.jpeg",
-        description: "Residential units that combine aesthetic appeal with sustainability. The project integrates renewable energy sources and green building practices for a modern yet eco-friendly lifestyle."
+        title: "Lavanya Greens Plaza",
+        imgUrl: "/assets/images/projects/lavanya_greens_plaza.jpg",
+        description: "A mixed-use development featuring retail outlets, entertainment zones, and green spaces. Lavanya Greens Plaza provides a vibrant atmosphere for work and leisure."
     }
 ];
 
@@ -38,17 +38,19 @@ const ongoingProjects = [
         description: "Located on the Nagpur-Chhindwara Highway, Shri Naveen Chambers is a landmark commercial property with excellent connectivity and strategic placement for maximum business visibility."
     },
     {
-        title: "Commercial Business Park",
-        imgUrl: "/assets/images/SingPost Centre to turn into Singapore's first retail mall to offer online shopping.jpeg",
-        description: "This ongoing project features cutting-edge commercial office spaces with a focus on sustainable development. The business park is designed to foster innovation and collaboration in a dynamic work environment."
+        title: "Shri Naveen Towers",
+        imgUrl: "/assets/images/projects/shri_naveen_towers.jpg",
+        description: "An ongoing premium commercial tower offering state-of-the-art office spaces and business amenities. Shri Naveen Towers is designed for modern enterprises looking for convenience and innovation."
     },
-    {
-        title: " Habitat Community",
-        imgUrl: "/assets/images/Residential Project.jpeg",
-        description: "A modern community project emphasizing green energy solutions, solar power integration, and sustainable living. This housing initiative offers a perfect blend of luxury and eco-consciousness."
-    }
-];
 
+   
+    {
+        title: "Shri Omkaar Residency",
+        imgUrl: "/assets/images/projects/shri_omkaar_residency.jpg",
+        description: "A residential community designed with luxury and sustainability in mind. Shri Omkaar Residency features modern homes, landscaped gardens, and advanced energy-saving systems."
+    }
+    
+];
 
 
 

@@ -444,153 +444,175 @@ section p {
 
 /* Section Headings */
 /* Why Choose Us Section Styling */
-/* General styling for the section */
-.why-choose-us {
-  padding: 2rem;
-  background-color: #fff;
-  /* White background */
-  text-align: center;
+/* General styling for the section */.why-choose-us {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
 .why-choose-us h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #000;
-  /* Black text */
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
 }
 
-/* Styling for the icons and features grid */
 .usp-icons {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .usp-icon {
-  background: #f8f8f8;
-  /* Light gray for contrast */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle black shadow */
-  padding: 1.5rem;
-  margin: 1rem;
-  flex: 1 1 21%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  max-width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .usp-icon img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
 }
 
 .usp-icon h3 {
-  font-size: 1.5rem;
-  color: #000;
-  /* Black text */
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 0.5rem;
 }
 
 .usp-icon p {
-  font-size: 1rem;
-  color: #333;
-  /* Darker gray for readability */
-  margin-bottom: 0;
+    font-size: 1rem;
+    color: #666;
 }
 
 .usp-icon:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  /* Enhanced shadow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries for responsiveness */
+/* SEO Optimizations */
+.usp-icon img {
+    alt: "";
+    loading: lazy;
+}
 
-/* Small screens (e.g., mobile devices) */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .usp-icon {
-    flex: 1 1 45%;
-    /* Adjust to fit two columns */
-    max-width: 45%;
-  }
-
-  .why-choose-us h2 {
-    font-size: 2rem;
-    /* Slightly smaller font for small screens */
-  }
+    .why-choose-us h2 {
+        font-size: 2rem;
+    }
 }
 
-/* Extra small screens (e.g., very small phones) */
 @media (max-width: 480px) {
-  .usp-icon {
-    flex: 1 1 100%;
-    /* Stack to full width on very small screens */
-    max-width: 100%;
-  }
-
-  .why-choose-us h2 {
-    font-size: 1.8rem;
-    /* Smaller header font */
-    margin-bottom: 1.5rem;
-    /* Reduced margin for smaller screens */
-  }
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+    }
 }
-
-
 /* Leadership Section */
 /* Leadership Section */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
 h2 {
   text-align: center;
   margin: 1em 0;
   color: #003366;
 }
-
-#management, #team {
-  padding: 2em;
+#management {
+    padding: 2em;
+    background-color: #f9f9f9;
 }
 
-.management-card, .team-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 10px;
-  margin: 1em 0;
-  padding: 1em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
+#management h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
 }
 
-.management-card img, .team-card img {
-  width: 250px;
-  height: auto;
-  /* border-radius: 50%; */
-  margin-right: 1.5em;
+#management p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #666;
+}
+
+.management-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.management-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.management-card img {
+    width: 250px;
+    height: 350px;
+    /* border-radius: 50%; */
+    margin-right: 1.5em;
+    object-fit: cover;
 }
 
 .details {
-  max-width: 600px;
+    flex: 1;
 }
 
-.team-card {
-  text-align: center;
-  flex-direction: column;
+.details h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #333;
 }
 
-.team-card img {
-  margin: 0 auto 1em;
+.details p {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    color: #666;
 }
-/* General Section Styles */
+
+.social-links {
+    margin-top: 0.5em;
+}
+
+.social-links a {
+    margin-right: 0.5em;
+    color: #0077b5; /* LinkedIn Blue */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #005582;
+}
+
+@media (max-width: 768px) {
+    .management-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .management-card img {
+        margin-bottom: 1em;
+        margin-right: 0;
+    }
+
+    .details h3 {
+        font-size: 1.5em;
+    }
+
+    .details p {
+        font-size: 0.9em;
+    }
+}
+
+/* General Section Styles *//* Team Section */
 #team {
   padding: 3em 2em;
   background-color: #f5f7fa;
@@ -600,12 +622,12 @@ h2 {
   text-align: center;
   font-size: 2rem;
   color: #003366;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Management Team Card Layout */
+/* Team Card Layout */
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -617,10 +639,11 @@ h2 {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   width: 300px;
   padding: 1.5em;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
@@ -631,10 +654,11 @@ h2 {
 /* Image Styling */
 .team-card img {
   width: 120px;
-  height: 120px;
+  height: 140px;
   border-radius: 50%;
   margin-bottom: 1em;
   border: 3px solid #003366;
+  object-fit: cover;
 }
 
 /* Text Styling */
@@ -655,9 +679,10 @@ h2 {
   font-size: 1rem;
   color: #0066cc;
   margin-bottom: 0.5em;
+  text-transform: uppercase;
 }
 
-/* Social Icons */
+/* Social Links */
 .team-card .social-links {
   margin-top: 1em;
 }
@@ -690,23 +715,12 @@ h2 {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-@media (max-width: 768px) {
-  .management-card, .team-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .management-card img {
-    margin: 0 auto 1em;
-  }
-}
-
 /* Footer */
 .footer {
   background: var(--text-color);

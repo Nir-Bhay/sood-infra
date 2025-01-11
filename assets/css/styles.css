@@ -699,108 +699,81 @@ width: 70%;
 .social-media a {
     margin: 0.5rem 0;
 }
-
-.contact {
-    padding: 2rem;
-    background-color: #003366; /* Primary Blue */
-    color: #ffffff; /* Neutral White */
+.cta {
+    background-color: #f8f9fa;
+    padding: 4rem 1.5rem;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.contact h2 {
+.cta-content h2 {
     font-size: 2.5rem;
-    color: #ffffff; /* Neutral White */
-    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
-.contact p {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 1rem;
+.cta-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact .operating-hours,
-.contact .real-estate-info {
-    margin: 1rem 0;
-    text-align: left;
+.cta-btn {
+    padding: 1rem 2.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
 }
 
-.contact .operating-hours h3,
-.contact .real-estate-info h3 {
-    font-size: 1.5rem;
-    color: #ffffff;
-        /* Neutral White */
-        margin-bottom: 0.5rem;
+.cta-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.cta-btn:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta {
+        padding: 3rem 1.5rem;
     }
-    
-    .contact .btn {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: #1e90ff;
-        /* Secondary Blue */
-        color: #ffffff;
-        /* Neutral White */
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        margin-top: 1rem;
+
+    .cta-content h2 {
+        font-size: 2rem;
     }
-    
-    .contact .btn:hover {
-        background-color: #003366;
-        /* Primary Blue */
+
+    .cta-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
     }
-    
-    .contact .social-media {
-        margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 2.5rem 1rem;
     }
-    
-    .contact .social-media a {
-        display: inline-block;
-        margin: 0 0.5rem;
-        color: #1e90ff;
-        /* Secondary Blue */
-        text-decoration: none;
-        transition: color 0.3s ease;
+
+    .cta-content h2 {
+        font-size: 1.8rem;
     }
-    
-    .contact .social-media a:hover {
-        color: #003366;
-        /* Primary Blue */
+
+    .cta-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
     }
-    
-    @media (max-width: 768px) {
-        .contact {
-            padding: 1rem;
-        }
-    
-        .contact h2 {
-            font-size: 2rem;
-        }
-    
-        .contact p,
-        .contact .operating-hours h3,
-        .contact .real-estate-info h3 {
-            font-size: 1rem;
-        }
-    
-        .contact .btn {
-            width: 100%;
-            padding: 0.75rem;
-            margin-top: 1rem;
-        }
-    
-        .contact .social-media {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .contact .social-media a {
-            margin: 0.5rem 0;
-        }
-    }
-    
+}
    footer {
     padding: 3rem 1rem;
     background: #111;

@@ -15,10 +15,11 @@ body {
 /* Header Section */
 .services-header {
     margin-top: 80px;
-    background: url('header-bg.jpg') no-repeat center center/cover;
+    background: url('/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp') no-repeat center center/cover;
     padding: 4rem;
     text-align: center;
     color: #000000;
+  
 }
 
 .header-content h1 {
@@ -31,8 +32,7 @@ body {
 }
 
 /* Services Section */
-/* Services Section */
-.services {
+/* Services Section */.services {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
@@ -46,7 +46,7 @@ body {
     padding: 2rem;
     background: #fff;
     border-radius: 8px;
-    text-align: center;
+   
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeInUp 1s ease-in-out;
@@ -58,40 +58,15 @@ body {
 }
 
 .service-item .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Increased size */
+    height: 60px; /* Increased size */
     margin-bottom: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
+    color: black;
+    font-size: 2.5rem;
 }
 
-.residential-icon {
-    background-image: url('icons/residential.png');
-}
-
-.commercial-icon {
-    background-image: url('icons/commercial.png');
-}
-
-.consultation-icon {
-    background-image: url('icons/consultation.png');
-}
-
-.management-icon {
-    background-image: url('icons/management.png');
-}
-
-.interior-design-icon {
-    background-image: url('icons/interior-design.png');
-}
-
-.landscaping-icon {
-    background-image: url('icons/landscaping.png');
-}
-
-.project-management-icon {
-    background-image: url('icons/project-management.png');
-}
 
 .service-item h2 {
     color: #0044cc;
@@ -115,6 +90,15 @@ body {
 
 .service-item li {
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-item li::before {
+    content: "✔";  /* Check mark symbol for the bullet */
+    margin-right: 8px;
+    color: green; /* Color for the check mark */
+    font-weight: bold;
 }
 
 .cta-btn {
@@ -147,60 +131,62 @@ body {
 
 
 
-/* Our Process Section */
+/* Our Process Section *//* Our Process Section */
 .our-process {
-    padding: 3rem;
+    padding: 4rem 2rem;
     background: #e6f7ff;
     text-align: center;
 }
 
 .our-process h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #0044cc;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     animation: fadeInDown 1s ease-in-out;
 }
 
 .process-steps {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1.5rem;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .step {
-    flex: 1 1 200px;
+    flex: 1 1 220px;
     margin: 1rem;
     padding: 2rem;
-    background: #fff;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     animation: fadeInUp 1s ease-in-out;
 }
 
 .step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: #d9f7ff;
 }
 
 .step .icon {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #007bff;
     margin-bottom: 1rem;
 }
 
 .step h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #0044cc;
     margin-bottom: 1rem;
 }
 
 .step p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #555;
     margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 /* Keyframes for Animations */
@@ -227,6 +213,24 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .our-process h2 {
+        font-size: 2.2em;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 90%;
+    }
+}
+
 footer{
     background: #000;
 }
+

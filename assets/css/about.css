@@ -38,8 +38,10 @@ body {
   padding: 80px 5%;
   background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
   overflow: hidden;
-  margin-top:10vh;
+  margin-top: 10vh;
+  animation: fadeIn 2s ease-in-out;
 }
+
 
 .hero-content {
   flex: 1;
@@ -52,23 +54,28 @@ body {
   color: var(--text-color);
   margin-bottom: 20px;
   line-height: 1.2;
-  animation: fadeInUp 1.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
 }
+
 
 .hero-description {
   font-size: 1.2rem;
   color: var(--secondary-text);
   margin-bottom: 30px;
   line-height: 1.6;
-  animation: fadeInUp 1.5s ease-in-out 0.3s;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s ease-in-out 0.3s forwards;
 }
-
 .hero-cta {
   display: flex;
   gap: 20px;
-  animation: fadeInUp 1.5s ease-in-out 0.6s;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s ease-in-out 0.6s forwards;
 }
-
 .btn {
   padding: 12px 25px;
   font-size: 1.1rem;
@@ -99,8 +106,11 @@ body {
 .hero-image {
   flex: 1;
   max-width: 50%;
-  animation: fadeInRight 1.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1.5s ease-in-out forwards;
 }
+
 
 .hero-video {
   width: 100%;
@@ -110,12 +120,31 @@ body {
 }
 
 /* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
     transform: translateX(50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -207,126 +236,124 @@ section p {
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --milestone-hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-
-.story .timeline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 20px;
-  background: var(--neutral-white);
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
+/* General Styles *//* General Styles */
+.story {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+.story h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.story p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-.story .milestone {
-  background: var(--neutral-white);
-  color: var(--text-color);
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: var(--box-shadow);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-basis: calc(30% - 20px);
-  position: relative;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 0.8s ease-in-out forwards;
+/* Timeline */
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
 }
-
-.story .milestone:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.story .milestone:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.story .milestone:nth-child(5) {
-  animation-delay: 0.6s;
-}
-
-.story .milestone:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--milestone-hover-shadow);
-}
-
-.story .milestone .icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  background: var(--neutral-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--box-shadow);
-}
-
-.story .milestone .icon img {
-  width: 50%;
-  height: auto;
-}
-
-.story .milestone h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--primary-color);
-}
-
-.story .milestone p {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-.story .divider {
-  position: relative;
-  flex-basis: 5%;
-  height: 2px;
-  background: var(--secondary-color);
-  align-self: center;
-}
-
-.story .divider span {
-  width: 15px;
-  height: 15px;
-  background: var(--accent-color);
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-}
-
-@keyframes fadeInUp {
-  from {
+.milestone {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    flex-basis: calc(30% - 20px);
     opacity: 0;
     transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+.milestone:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.milestone .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #e6f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.milestone .icon img {
+    width: 50%;
+    height: auto;
+}
+.milestone h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+.milestone p {
+    font-size: 1rem;
+    color: #555;
 }
 
+/* Divider */
+.divider {
+    position: relative;
+    flex-basis: 5%;
+    height: 2px;
+    background: #007bff;
+    align-self: center;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.divider span {
+    width: 15px;
+    height: 15px;
+    background: #ff5722;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+/* Scroll Animation */
+[data-scroll] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-scroll].active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .story .milestone {
-    flex-basis: calc(45% - 20px);
-  }
+    .milestone {
+        flex-basis: calc(45% - 20px);
+    }
 }
 
 @media (max-width: 480px) {
-  .story .milestone {
-    flex-basis: 100%;
-  }
-
-  .story .divider {
-    display: none;
-  }
+    .milestone {
+        flex-basis: 100%;
+    }
+    .divider {
+        display: none;
+    }
 }
-
 /* Section Headings */
 
 
@@ -444,7 +471,9 @@ section p {
 
 /* Section Headings */
 /* Why Choose Us Section Styling */
-/* General styling for the section */.why-choose-us {
+/* General styling for the section */
+
+.why-choose-us {
     padding: 2rem 1rem;
     background-color: #f9f9f9;
     text-align: center;
@@ -454,6 +483,7 @@ section p {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .usp-icons {
@@ -469,6 +499,16 @@ section p {
     padding: 1.5rem;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.usp-icon:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.usp-icon:nth-child(odd) {
+    animation-delay: 0.4s;
 }
 
 .usp-icon img {
@@ -493,10 +533,38 @@ section p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* SEO Optimizations */
-.usp-icon img {
-    alt: "";
-    loading: lazy;
+/* Scroll Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll-triggered animation class */
+/* Initial State */
+.usp-icon {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.usp-icon.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Design */
@@ -511,6 +579,8 @@ section p {
         font-size: 1.8rem;
     }
 }
+
+
 /* Leadership Section */
 /* Leadership Section */
 h2 {
@@ -546,6 +616,18 @@ h2 {
     padding: 1.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Initial state for animation */
+.management-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Active state when in view */
+.management-card.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .management-card:hover {

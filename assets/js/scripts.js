@@ -78,5 +78,50 @@ renderProjects(ongoingProjects, 'ongoing-projects-gallery');
 // renderProjects(futureProjects, 'future-projects-gallery');
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollElements = document.querySelectorAll(".scroll-animate");
+
+    const elementInView = (el, offset = 0) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) - offset
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add("visible");
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener("scroll", handleScrollAnimation);
+});
 
 
+// Scroll Animation Function
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollElements = document.querySelectorAll('.scroll-hidden');
+
+    const scrollObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.1, // Trigger animation when 10% of the element is visible
+        }
+    );
+
+    scrollElements.forEach((el) => scrollObserver.observe(el));
+});

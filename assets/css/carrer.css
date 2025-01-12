@@ -51,7 +51,6 @@ header p {
 section {
     margin-bottom: 2rem;
 }
-
 #why-sood-infra {
     padding: 60px 20px;
     background: linear-gradient(135deg, #f0f4ff, #ffffff);
@@ -66,6 +65,7 @@ section {
     animation: fadeInDown 1s ease-in-out;
 }
 
+/* Card Container */
 .why-cards {
     display: flex;
     flex-wrap: wrap;
@@ -73,11 +73,13 @@ section {
     justify-content: center;
 }
 
+/* Individual Card */
 .card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: calc(50% - 10px);
+    /* Adjusts for desktop/tablet */
     max-width: 400px;
     padding: 20px;
     text-align: left;
@@ -107,11 +109,13 @@ section {
     line-height: 1.6;
 }
 
+/* Keyframes for Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -123,12 +127,63 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        /* Take full width for smaller screens */
+        max-width: none;
+    }
+
+    #why-sood-infra h2 {
+        font-size: 2rem;
+        /* Adjust header size */
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+        /* Adjust card title size */
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        /* Adjust paragraph size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    #why-sood-infra {
+        padding: 40px 10px;
+        /* Reduce padding for small screens */
+    }
+
+    #why-sood-infra h2 {
+        font-size: 1.8rem;
+        /* Further reduce header size */
+    }
+
+    .card {
+        padding: 15px;
+        /* Reduce padding in cards */
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        /* Adjust title size for smaller screens */
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        /* Further adjust paragraph size */
+    }
+}
 #what-we-look-for {
     padding: 60px 20px;
     background: linear-gradient(135deg, #ffffff, #f9f9f9);

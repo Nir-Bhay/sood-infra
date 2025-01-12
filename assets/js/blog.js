@@ -29,24 +29,6 @@ document.querySelectorAll("nav a").forEach(link => {
     });
 });
 
-// Add a gradient background animation
-const header = document.querySelector('#header');
-// let colors = [
-//     ['#2575fc'],
-//     ['#ff7a18', '#ff3c00'],
-//     ['#43cea2', '#185a9d']
-// ];
-
-let step = 0;
-const changeGradient = () => {
-    const [start, end] = colors[step % colors.length];
-    header.style.background = `linear-gradient(135deg, ${start}, ${end})`;
-    step++;
-};
-setInterval(changeGradient, 5000);
-
-
-
 // Scroll reveal animation for blog cards
 
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -68,5 +50,31 @@ filterButtons.forEach((button) => {
         filterButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
     });
+});
+
+
+const images = document.querySelectorAll('.gallery-item img'); // Target images inside the gallery items
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const closeModal = document.getElementById('closeModal');
+
+// Add event listener to each image
+images.forEach((image) => {
+    image.addEventListener('click', function () {
+        modal.style.display = 'flex'; // Show modal
+        modalImg.src = this.src; // Set the clicked image as modal image
+    });
+});
+
+// Close modal on 'X' button click
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal on clicking outside of the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 });
 

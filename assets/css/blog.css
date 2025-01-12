@@ -542,78 +542,189 @@ nav a:hover {
 
 
 
-/* Gallery */
-/* Gallery Section */
-#gallery h2 {
+/* Gallery *//* Gallery Section */
+.gallery-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
   text-align: center;
-  /* Center the heading */
-  font-size: 2rem;
-  /* Adjust the font size */
-  margin-bottom: 20px;
-  /* Space below the heading */
 }
 
-/* Gallery Container */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Ensure images fit responsively */
-  gap: 10px;
+.gallery-header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-/* Gallery Item Styling */
-.gallery-item {
-  width: 100%;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.gallery-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
-/* Hover Effects */
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.filter-buttons {
+  margin-bottom: 2rem;
 }
 
-/* Responsive Styling for Smaller Screens */
-@media (max-width: 768px) {
-  #gallery h2 {
-    font-size: 1.5rem;
-    /* Slightly smaller heading on smaller screens */
-  }
-
-  .gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* Adjust grid layout for mobile */
-  }
-
-  .gallery-item {
-    margin: 0;
-  }
-}
-
-/* Extra Small Devices (Mobile) */
-@media (max-width: 480px) {
-  #gallery h2 {
-    font-size: 1.2rem;
-    /* Smaller font size for very small screens */
-  }
-
-  .gallery-container {
-    grid-template-columns: 1fr;
-    /* Single column on very small screens */
-  }
-
-  .gallery-item {
-    margin: 0;
-  }
-}
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
+.filter-btn {
+  background-color: #007bff;
   color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 1rem;
 }
 
-/* Responsive */
+.filter-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.filter-btn:focus {
+  outline: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 90%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-header h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .filter-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .gallery-header p {
+    font-size: 0.9rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background: transparent;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

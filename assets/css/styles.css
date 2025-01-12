@@ -20,19 +20,6 @@ body {
     --accent-color: #4a90e2;
 }
 
-/* Preload Fonts for Faster Rendering */
-@font-face {
-    font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/Roboto.woff2') format('woff2');
-    font-display: swap;
-}
-
 /* General Styles for .hero */
 .hero {
     background-image: url('/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp');

@@ -230,7 +230,6 @@ body {
     }
 }
 
-footer{
-    background: #000;
+html {
+    scroll-behavior: smooth;
 }
-

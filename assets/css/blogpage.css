@@ -192,20 +192,7 @@ body {
     text-decoration: underline;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
-footer p {
-    font-size: 1rem;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -266,4 +253,8 @@ footer p {
     .related-posts ul li {
         font-size: 0.9rem;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }

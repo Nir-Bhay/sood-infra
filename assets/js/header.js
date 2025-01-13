@@ -51,14 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     icon.classList.toggle('rotated');
                 }
             }
+
+            // Close the menubar when clicking on a submenu
+            hamburger.classList.remove('hamburger-active');
+            menubar.classList.remove('active');
         });
     });
 });
 
 
+
 // // // JavaScript code to show the scroll-to-top button and handle the smooth scroll
 
-const backToTopButton = document.getElementById('back-to-top');
 
 const toggleBackToTopButton = () => {
     backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
@@ -68,6 +72,33 @@ const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+// Back to Top Button
+const backToTopButton = document.querySelector('#back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'flex';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 // // Event listeners
 // window.addEventListener('scroll', toggleBackToTopButton);
 // backToTopButton.addEventListener('click', scrollToTop);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+

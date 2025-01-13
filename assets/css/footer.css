@@ -1,66 +1,68 @@
+/* Footer Container */
 .footer-container {
-  width: 100%;
+    width: 100%;
     margin: 0 auto;
-    background-color: black;
-    padding: 20px;
+    background-color: #000000;
+    color: #ccc;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    text-align: left;
 }
 
+/* Footer Logo */
 .footer-logo img {
     height: 50px;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Footer Columns */
 .footer-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 40px;
 }
 
 .footer-column {
-    flex: 1 1 200px;
-    margin: 1rem;
+    flex: 1 1 220px;
+    margin: 15px;
 }
 
 .footer-column h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
     color: #007bff;
-    /* Highlight color */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
 }
 
 .footer-column a {
     display: block;
     color: #ccc;
     text-decoration: none;
-    margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
     color: #007bff;
-    /* Highlight color on hover */
 }
 
-.social-media {
-    margin: 1rem 0;
-}
 
-.social-media a {
-    margin: 0 0.5rem;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-.social-media a:hover {
-    color: #0056b3;
-}
-
+/* Footer Text */
 footer p {
-    margin: 0.5rem 0;
-    color: #ccc;
-    /* Light gray text */
+    margin: 10px 0;
+    text-align: center;
 }
 
 footer a {
@@ -75,171 +77,50 @@ footer a:hover {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+    .footer-container {
+        padding: 20px;
+    }
+
+    .footer-logo img {
+        height: 40px;
+    }
+
     .footer-links {
         flex-direction: column;
         align-items: center;
     }
 
     .footer-column {
-        margin: 1rem 0;
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .about-preview,
-    .services,
-    .portfolio,
-    .testimonials,
-    .why-choose-us,
-    .blog,
-    .contact {
-        padding: 1rem;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .service-card {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-    .portfolio-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-    .testimonial-card {
-        margin: 1rem 0;
-    }
-
-    .usp-icons {
-        flex-direction: column;
-    }
-
-    .usp-icon {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-    .blog-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .blog-card {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-    .social-media a {
-        display: inline-block;
-        margin-right: 0.5rem;
-    }
-}
-
-/* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .service-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .service-card {
-        width: 45%;
-        margin: 0.5rem;
-    }
-
-    .portfolio-gallery {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .portfolio-item {
-        width: 45%;
-        margin: 0.5rem;
-    }
-
-    .blog-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .blog-card {
-        width: 45%;
-        margin: 0.5rem;
-    }
-
-    .usp-icons {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .usp-icon {
-        width: 22%;
-        margin: 0.5rem;
-    }
-}
-
-
-
-.menu-toggle {
-    display: none;
-    /* Hidden by default */
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    /* Dark color for the hamburger icon */
-}
-
-/* Responsive Menu Styles */
-@media (max-width: 768px) {
-    /* .menu-toggle {
-        display: block;
-        /* Show toggle button on small screens */
-    /* } */
-
-    .nav-menu ul {
-        flex-direction: column;
-        /* Stack menu items vertically */
-        gap: 0.5rem;
-        display: none;
-        /* Hide by default */
-    }
-
-    .nav-menu.active ul {
+        margin: 10px 0;
         display: flex;
-        /* Show menu when active */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-basis: 100%;
+        padding: 20px;
+        gap: 10px;
+        
+
     }
 
-    .cta-button {
-        margin-top: 1rem;
-        /* Add margin on mobile */
+    .social-media {
+        flex-direction: column;
     }
 }
+
+/* SEO-Friendly Enhancements */
+footer,
+.footer-container {
+    background-color: #000000;
+    color: #fff;
+}
+
+footer p,
+.footer-column p {
+    font-size: 1rem;
+}
+footer .footer-logo img {
+    filter: invert(1) grayscale(100%) contrast(100%);
+}
+/* Accessibility Enhancements */

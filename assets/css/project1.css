@@ -651,14 +651,6 @@ margin-left: 40%;
     }
 }
 
-/* Footer styles */
-.footer {
-    background-color: #242424;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer p {
-    font-size: 18px;
+html {
+    scroll-behavior: smooth;
 }

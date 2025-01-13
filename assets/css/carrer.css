@@ -41,12 +41,7 @@ header p {
     animation: fadeInUp 1s ease;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    padding: 2rem 0;
-}
+
 
 section {
     margin-bottom: 2rem;

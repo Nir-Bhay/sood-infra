@@ -15,21 +15,22 @@
 
 const pastProjects = [
     {
+        title: "Shri Naveen Chambers",
+        imgUrl: "/assets/images/projects/shri_naveen_chambers.jpg",
+        description: "A contemporary commercial complex currently under development, providing cutting-edge office spaces and business facilities. Shri Naveen Chambers is tailored for progressive businesses seeking both convenience and innovation."
+    },
+    {
         title: "Anuradha Walk Street",
         imgUrl: "/assets/images/projects/anuradha_walk_street.jpg",
-        description: "A vibrant commercial project with pedestrian-friendly design, retail shops, and dining outlets. Anuradha Walk Street creates a unique urban experience with a blend of leisure and business opportunities."
+        description: "A dynamic commercial development characterized by its pedestrian-centric design, featuring retail establishments and dining venues. Anuradha Walk Street offers a distinctive urban experience that harmoniously combines leisure and business prospects."
     },
     {
-        title: "Shri Omkaar Towers",
-        imgUrl: "/assets/images/projects/shri_omkaar_towers.jpg",
-        description: "An iconic high-rise residential and commercial project with stunning architecture, premium facilities, and panoramic city views. Shri Omkaar Towers exemplify modern living and business spaces."
-    },
-    {
-        title: "Lavanya Greens Plaza",
-        imgUrl: "/assets/images/projects/lavanya_greens_plaza.jpg",
-        description: "A mixed-use development featuring retail outlets, entertainment zones, and green spaces. Lavanya Greens Plaza provides a vibrant atmosphere for work and leisure."
+        title: "Lavanya Greens Residency",
+        imgUrl: "/assets/images/projects/lavanya_greens_residency.jpg",
+        description: "A residential development crafted with a focus on luxury and sustainability. Lavanya Greens Residency offers contemporary residences, beautifully landscaped gardens, and state-of-the-art energy-efficient systems."
     }
 ];
+
 
 const ongoingProjects = [
     {

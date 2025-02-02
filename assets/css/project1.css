@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling *//* Header Section Styles */
+/* Header Section Styles */
 .header-section {
     position: relative;
     height: 60vh;
@@ -36,14 +36,12 @@ body {
     max-width: 800px;
     margin: 0 auto;
     animation: slideIn 2s ease;
-    
 }
 
 .header-title {
     font-size: 48px;
     margin-top: 80px;
     font-weight: 700;
-    /* margin-bottom: 20px; */
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #ffffff;
@@ -208,7 +206,7 @@ html {
 section {
     padding: 60px 0;
 }
-/* General styling for both sections */
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -239,27 +237,24 @@ h2 {
     align-items: center;
     margin-top: 2rem;
     width: 100%;
-   
 }
 
 .text-content {
-  width: 50%;
+    width: 50%;
     flex: 1;
     font-size: 1.1em;
     font-weight: 600;
     color: #666;
     line-height: 1.7;
-    /* background-color: rebeccapurple; */
-    
 }
-.image-content{
-  
-width: 60%;
-/* background-color: rebeccapurple; */
+
+.image-content {
+    width: 60%;
 }
+
 .image-content img {
-width: 70%;
-margin-left: 40%;
+    width: 70%;
+    margin-left: 40%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -312,8 +307,6 @@ margin-left: 40%;
     }
 }
 
-
-/* Gallery section */
 /* Gallery Section */
 .gallery {
     padding: 4rem 0;
@@ -410,8 +403,6 @@ margin-left: 40%;
     }
 }
 
-
-/* Specifications section */
 /* Building Specifications Section */
 .specifications {
     background-color: #f4f7f9;
@@ -495,7 +486,6 @@ margin-left: 40%;
     }
 }
 
-/* Shops section */
 /* Shops Available Section */
 .shops {
     background-color: #ffffff;
@@ -577,10 +567,9 @@ margin-left: 40%;
     }
 }
 
-/* Call-to-action section */
 /* Call to Action (CTA) Section */
 .cta {
-    background: linear-gradient(135deg, #007bff, #e74c3c);
+    /* background: linear-gradientcta(135deg, #007bff, #e74c3c); */
     color: #fff;
     padding: 4rem 0;
     text-align: center;
@@ -599,7 +588,7 @@ margin-left: 40%;
 
 .cta-description {
     font-size: 1.2rem;
-    color: #f1f1f1;
+    color: #000000;
     margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 800px;

@@ -738,10 +738,10 @@ h2 {
 /* Image Styling */
 .team-card img {
   width: 120px;
-  height: 140px;
-  border-radius: 50%;
+  height: 160px;
+ 
   margin-bottom: 1em;
-  border: 3px solid #003366;
+ 
   object-fit: cover;
 }
 

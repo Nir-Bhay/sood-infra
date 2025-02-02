@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const menubar = document.querySelector('.menubar');

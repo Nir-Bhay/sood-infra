@@ -1,0 +1,14 @@
+{
+    "redirects": [
+        {
+            "source": "/blank-I",
+            "destination": "/pages/about.html",
+            "permanent": true
+        },
+        {
+            "source": "/about",
+            "destination": "/pages/about.html",
+            "permanent": true
+        }
+    ]
+}

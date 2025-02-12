@@ -16,17 +16,17 @@
 const pastProjects = [
     {
         title: "Shri Naveen Chambers",
-        imgUrl: "/assets/images/projects/shri_naveen_chambers.jpg",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "A contemporary commercial complex currently under development, providing cutting-edge office spaces and business facilities. Shri Naveen Chambers is tailored for progressive businesses seeking both convenience and innovation."
     },
     {
         title: "Anuradha Walk Street",
-        imgUrl: "/assets/images/projects/anuradha_walk_street.jpg",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "A dynamic commercial development characterized by its pedestrian-centric design, featuring retail establishments and dining venues. Anuradha Walk Street offers a distinctive urban experience that harmoniously combines leisure and business prospects."
     },
     {
         title: "Lavanya Greens Residency",
-        imgUrl: "/assets/images/projects/lavanya_greens_residency.jpg",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "A residential development crafted with a focus on luxury and sustainability. Lavanya Greens Residency offers contemporary residences, beautifully landscaped gardens, and state-of-the-art energy-efficient systems."
     }
 ];
@@ -35,22 +35,22 @@ const pastProjects = [
 const ongoingProjects = [
     {
         title: "Shri Naveen Chambers",
-        imgUrl: "/assets/images/projects/Sood Infra , construction , Soodinfra office.webp",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "Located on the Nagpur-Chhindwara Highway, Shri Naveen Chambers is a landmark commercial property with excellent connectivity and strategic placement for maximum business visibility."
     },
     {
         title: "Shri Naveen Towers",
-        imgUrl: "/assets/images/projects/shri_naveen_towers.jpg",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "An ongoing premium commercial tower offering state-of-the-art office spaces and business amenities. Shri Naveen Towers is designed for modern enterprises looking for convenience and innovation."
     },
 
-   
+
     {
         title: "Shri Omkaar Residency",
-        imgUrl: "/assets/images/projects/shri_omkaar_residency.jpg",
+        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
         description: "A residential community designed with luxury and sustainability in mind. Shri Omkaar Residency features modern homes, landscaped gardens, and advanced energy-saving systems."
     }
-    
+
 ];
 
 

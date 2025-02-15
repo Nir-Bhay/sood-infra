@@ -311,7 +311,7 @@ body.mobile-active {
     justify-content: center;
     text-decoration: none;
     border-radius: 50%;
-    background-color: #000; /* Black background */
+    background-color: #0d4b5d; /* Black background */
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
@@ -440,7 +440,7 @@ body.mobile-active {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #ffffff;
+    background: #0d4b5d;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -454,14 +454,15 @@ body.mobile-active {
     z-index: 50;
 }
 
-#back-to-top:hover {
-    background-color: #ffffff;
-}
 
 #back-to-top img {
+filter: invert(100%);
     width: 20px;
     height: 20px;
 }
 
 
 
+#back-to-top:hover {
+    border: 1px solid rgb(0, 0, 0);
+}

@@ -17,7 +17,7 @@ body {
 
 /* Header Styling */
 .blog-header {
-    background-color: #003366;
+    background-color: #0d4b5d;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -89,7 +89,7 @@ body {
 .blog-body h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #003366;
+    color: #0d4b5d;
     font-weight: bold;
 }
 

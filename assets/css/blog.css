@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #0d4b5d, #0d4b5d);
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -49,20 +49,22 @@ body {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.2rem;
-  color: #fff;
-  background: #ff7a18;
+  color: #000000;
+  background: #ffffff;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(255, 122, 24, 0.3);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .cta-btn:hover {
-  background: #ff3c00;
+  background: #0d4b5d;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(255, 60, 0, 0.5);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  color: white;
 }
 
 .scroll-indicator {
@@ -130,7 +132,7 @@ body {
 .filter-btn {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   font-size: 1rem;
   border-radius: 5px;
@@ -140,11 +142,11 @@ body {
 }
 
 .filter-btn.active {
-  background-color: #0056b3;
+  background-color: #0d4b5d;
 }
 
 .filter-btn:hover {
-  background-color: #0056b3;
+  background-color: #0d4b5d;
 }
 
 /* Blog Cards Grid */
@@ -182,7 +184,7 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
-  background-color: #ff6347;
+  background-color: #0d4b5d;
   color: #fff;
   padding: 5px 10px;
   font-size: 0.8rem;
@@ -215,7 +217,7 @@ body {
 .read-more {
   display: inline-block;
   color: #fff;
-  background-color: #007bff;
+  background-color: #0d4b5d;
   padding: 10px 20px;
   text-decoration: none;
   font-size: 1rem;
@@ -224,7 +226,7 @@ body {
 }
 
 .read-more:hover {
-  background-color: #0056b3;
+  background-color: #2789a4;
 }
 
 /* Responsive Design */
@@ -235,7 +237,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
     color: #fff;
     overflow: hidden;
     position: relative;
@@ -407,7 +409,7 @@ body {
   display: inline-block;
   margin-top: 10px;
   color: #fff;
-  background: #2575fc;
+  background: #0d4b5d;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
@@ -415,7 +417,7 @@ body {
 }
 
 .btn:hover {
-  background: #6a11cb;
+  background: #0d4b5d;
 }
 
 /* Media Queries for Responsiveness */
@@ -478,14 +480,14 @@ body {
 
 .media-sources li strong {
   font-weight: bold;
-  color: #2575fc;
+  color: #0d4b5d;
   font-size: 18px;
   display: block;
   margin-bottom: 8px;
 }
 
 .media-sources li em {
-  color: #6a11cb;
+  color: #0d4b5d;
   font-style: normal;
   font-weight: 500;
   display: block;
@@ -499,7 +501,7 @@ body {
 }
 
 .media-sources li a {
-  color: #2575fc;
+  color: #0d4b5d;
   text-decoration: none;
   font-weight: 500;
   margin-top: 10px;
@@ -551,7 +553,7 @@ body {
 }
 
 .filter-btn {
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -563,7 +565,7 @@ body {
 }
 
 .filter-btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(91, 155, 224);
   transform: translateY(-3px);
 }
 

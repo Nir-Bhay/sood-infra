@@ -15,11 +15,11 @@ body {
 /* Projects Header Styling */
 /* Header Section */
 .projects-header {
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   text-align: center;
   padding: 3rem 1.5rem;
-  border-radius: 0 0 20px 20px;
+  /* border-radius: 0 0 20px 20px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
 }
@@ -48,12 +48,13 @@ body {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: justify;
 }
 
 .projects-header .explore-btn {
   padding: 0.8rem 2rem;
   background-color: #fff;
-  color: #007bff;
+  color: #0d4b5d;
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 50px;
@@ -62,8 +63,9 @@ body {
 }
 
 .projects-header .explore-btn:hover {
-  background-color: #0056b3;
+  background-color: #0d4b5d;
   color: #fff;
+  border: 1px solid white;
 }
 
 .projects-header .explore-btn:focus {
@@ -126,7 +128,7 @@ body {
   margin: 0 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #333;
+  background-color: #0d4b5d;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -205,13 +207,14 @@ body {
   font-size: 1rem;
   color: #666;
   margin-bottom: 0.8rem;
+  text-align: justify;
 }
 
 .view-details {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
@@ -221,7 +224,7 @@ body {
 
 /* View Details Button Hover Effects */
 .view-details:hover {
-  background-color: #0056b3;
+  background-color: rgb(21, 113, 211);
 }
 
 .view-details:focus {
@@ -328,7 +331,7 @@ section {
 
 .cta-btn {
   padding: 1rem 2.5rem;
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
@@ -339,7 +342,7 @@ section {
 }
 
 .cta-btn:hover {
-  background-color: #0056b3;
+  background-color: #0d4b5d;
   transform: translateY(-3px);
 }
 
@@ -406,7 +409,7 @@ section {
 }
 
 .filter-btn {
-  background-color: #007bff;
+  background-color: #0d4b5d;
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -418,7 +421,7 @@ section {
 }
 
 .filter-btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(18, 112, 211);
   transform: translateY(-3px);
 }
 

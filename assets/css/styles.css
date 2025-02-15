@@ -788,19 +788,22 @@ font-weight: bold;
 
 .cta-btn {
     padding: 1rem 2.5rem;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffffff;
+    color: #0d4b5d;
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;
     margin-top: 1rem;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .cta-btn:hover {
-    background-color: #0056b3;
+    background-color: #0d4b5d;
     transform: translateY(-3px);
+color: white !important;
+border: 1px solid rgb(255, 255, 255);
 }
 
 .cta-btn:focus {

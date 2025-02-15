@@ -17,16 +17,17 @@ body {
 }
 
 header {
-    background: #0056b3;
+    background: #0d4b5d;
     color: white;
-    padding: 2rem 0;
-    text-align: center;
+    padding: 2rem 2rem;
+    text-align: justify;
     transition: background 0.5s ease;
     margin-top: 5%;
+    text-align: center;
 }
 
 header:hover {
-    background: #004494;
+    background: #105d72;
 }
 
 header h1 {
@@ -39,6 +40,7 @@ header p {
     margin: 0;
     font-size: 1.2rem;
     animation: fadeInUp 1s ease;
+    text-align: justify;
 }
 
 
@@ -89,7 +91,7 @@ section {
 
 .card h3 {
     font-size: 1.5rem;
-    color: #0056b3;
+    color: #0d4b5d;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -102,6 +104,7 @@ section {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Keyframes for Animations */
@@ -204,7 +207,7 @@ section {
     background: #fff;
     border-radius: 10px;
     padding: 20px;
-    text-align: center;
+    text-align: justify;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease;
@@ -217,18 +220,18 @@ section {
 
 .quality i {
     font-size: 2.5rem;
-    color: #000000;
+    color: #0d4b5d;
     margin-bottom: 15px;
     transition: color 0.3s ease;
 }
 
 .quality:hover i {
-    color: #0056b3;
+    color: #0d4b5d;
 }
 
 .quality h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #0d4b5d;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -288,7 +291,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, #000000, #0056b3);
+    background: linear-gradient(to right, #000000, #0d4b5d);
     transition: transform 0.3s ease;
     transform: scaleX(0);
     transform-origin: left;
@@ -300,7 +303,7 @@ section {
 
 .position-card h3 {
     font-size: 1.5rem;
-    color: #0056b3;
+    color: #0d4b5d;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -343,6 +346,7 @@ section {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    text-align: justify;
 }
 
 #apply-form label {
@@ -368,7 +372,7 @@ section {
 #apply-form input:focus,
 #apply-form select:focus,
 #apply-form textarea:focus {
-    border-color: #007bff;
+    border-color: #0d4b5d;
 }
 
 #apply-form textarea {
@@ -377,7 +381,7 @@ section {
 }
 
 #apply-form button {
-    background-color: #007bff;
+    background-color: #0d4b5d;
     color: #fff;
     padding: 15px 20px;
     border: none;
@@ -390,7 +394,7 @@ section {
 }
 
 #apply-form button:hover {
-    background-color: #0056b3;
+    background-color: rgb(19, 102, 191);
     transform: scale(1.05);
 }
 

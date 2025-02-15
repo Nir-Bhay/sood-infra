@@ -33,397 +33,411 @@
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/9148b44fb0.js" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-48FL9ZZXYE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-48FL9ZZXYE');
+    </script>
     <!-- Canonical Link -->
     <link rel="canonical" href="https://www.soodinfra.com/pages/project-details.html">
-    <style>/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-/* Header Section Styles */
-.header-section {
-    position: relative;
-    height: 60vh;
-    background: linear-gradient(to bottom right, #002f4b, #dcf5ff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-}
+        /* Header Section Styles */
+        .header-section {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(to bottom right, #002f4b, #dcf5ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
 
-.header-container {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    animation: fadeInUp 2s ease-out;
-}
+        .header-container {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            animation: fadeInUp 2s ease-out;
+        }
 
-.header-content {
-    max-width: 800px;
-    margin: 0 auto;
-    animation: slideIn 2s ease;
-}
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: slideIn 2s ease;
+        }
 
-.header-title {
-    font-size: 48px;
-    margin-top: 80px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    animation: fadeIn 1s ease-in-out;
-    transition: transform 0.5s ease, color 0.3s ease;
-}
+        .header-title {
+            font-size: 48px;
+            margin-top: 80px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 1s ease-in-out;
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
 
-.header-title:hover {
-    transform: scale(1.1);
-    color: #00c4ff;
-}
+        .header-title:hover {
+            transform: scale(1.1);
+            color: #00c4ff;
+        }
 
-.header-subtitle {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    font-weight: 300;
-    animation: fadeIn 1.5s ease-in-out;
-    transition: transform 0.5s ease, opacity 0.3s ease;
-}
+        .header-subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 300;
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.5s ease, opacity 0.3s ease;
+        }
 
-.header-subtitle:hover {
-    transform: translateY(-10px);
-    opacity: 0.9;
-}
+        .header-subtitle:hover {
+            transform: translateY(-10px);
+            opacity: 0.9;
+        }
 
-.header-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    animation: fadeIn 2s ease-in-out;
-}
+        .header-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-}
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-}
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
 
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #fff;
-}
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #fff;
+        }
 
-.btn-secondary:hover {
-    background-color: #ffffff;
-    color: #007bff;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
-}
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #007bff;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+        }
 
-/* Background Animation */
-.header-section::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 47, 75, 0.8), transparent);
-    animation: rotateBackground 20s linear infinite;
-    z-index: 1;
-}
+        /* Background Animation */
+        .header-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 47, 75, 0.8), transparent);
+            animation: rotateBackground 20s linear infinite;
+            z-index: 1;
+        }
 
-@keyframes rotateBackground {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+        @keyframes rotateBackground {
+            0% {
+                transform: rotate(0deg);
+            }
 
-/* Keyframes for fade-in and slide-in animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        /* Keyframes for fade-in and slide-in animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+            100% {
+                opacity: 1;
+            }
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 32px;
-    }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
 
-    .header-subtitle {
-        font-size: 16px;
-    }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
 
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 24px;
-    }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
 
-    .header-subtitle {
-        font-size: 14px;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
 
-    .btn {
-        font-size: 12px;
-        padding: 8px 15px;
-    }
-}
+            .header-subtitle {
+                font-size: 16px;
+            }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
 
-/* Section styles */
-section {
-    padding: 60px 0;
-}
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 24px;
+            }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 3rem 0;
-}
+            .header-subtitle {
+                font-size: 14px;
+            }
 
-h2 {
-    font-size: 2rem;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-}
+            .btn {
+                font-size: 12px;
+                padding: 8px 15px;
+            }
+        }
 
-/* Project Overview Section */
-.overview {
-    background-color: #f9f9f9;
-    padding: 3rem 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
 
-.overview-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: center;
-    margin-top: 2rem;
-    width: 100%;
-}
+        /* Section styles */
+        section {
+            padding: 60px 0;
+        }
 
-.text-content {
-    width: 50%;
-    flex: 1;
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #666;
-    line-height: 1.7;
-}
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
 
-.image-content {
-    width: 60%;
-}
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
 
-.image-content img {
-    width: 70%;
-    margin-left: 40%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    transition: transform 0.3s ease-in-out;
-}
+        /* Project Overview Section */
+        .overview {
+            background-color: #f9f9f9;
+            padding: 3rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.image-content img:hover {
-    transform: scale(1.05);
-}
+        .overview-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
 
-/* Location Section */
-.location {
-    background-color: #fff;
-    padding: 3rem 0;
-    margin-top: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .text-content {
+            width: 50%;
+            flex: 1;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #666;
+            line-height: 1.7;
+        }
 
-.location p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
+        .image-content {
+            width: 60%;
+        }
 
-.location strong {
-    font-weight: 700;
-    color: #333;
-}
+        .image-content img {
+            width: 70%;
+            margin-left: 40%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            transition: transform 0.3s ease-in-out;
+        }
 
-.location p {
-    margin-bottom: 1rem;
-}
+        .image-content img:hover {
+            transform: scale(1.05);
+        }
 
-/* Gallery Section */
-.gallery {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
-    text-align: center;
-}
+        /* Location Section */
+        .location {
+            background-color: #fff;
+            padding: 3rem 0;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.gallery h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #333;
-}
+        .location p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
 
-.images {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-}
+        .location strong {
+            font-weight: 700;
+            color: #333;
+        }
 
-.gallery-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
+        .location p {
+            margin-bottom: 1rem;
+        }
 
-.gallery-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+        /* Gallery Section */
+        .gallery {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
 
-/* Modal for Image Popup */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.5s;
-}
+        .gallery h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
 
-.modal-content {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-}
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            justify-items: center;
+        }
 
-.modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: 5px 10px;
-}
+        .gallery-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-/* Animation for Modal */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+        /* Modal for Image Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s;
+        }
 
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .gallery h2 {
-        font-size: 2rem;
-    }
+        .modal-content {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+        }
 
-    .gallery-img {
-        max-width: 95%;
-    }
-}
-</style>
+        .modal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        /* Animation for Modal */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .gallery h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-img {
+                max-width: 95%;
+            }
+        }
+    </style>
 </head>
 
 
@@ -562,133 +576,151 @@ h2 {
 
 
 
-<!-- Header Section -->
-<header id="header" class="header-section">
-    <div class="header-container">
-        <div class="header-content">
-            <h1 class="header-title">Welcome to Anuradha Walk Street</h1>
-            <h3>सहिता कार्यसाधिका</h3>
-            <p class="header-subtitle">
-                A High Street Retail Project serving Lavanya Greens Residency and the National Highway.
-            </p>
-            <div class="header-buttons">
-                <a href="#overview" class="btn btn-primary">Learn More</a>
-                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    <!-- Header Section -->
+    <header id="header" class="header-section">
+        <div class="header-container">
+            <div class="header-content">
+                <h1 class="header-title">Welcome to Anuradha Walk Street</h1>
+                <h3>सहिता कार्यसाधिका</h3>
+                <p class="header-subtitle">
+                    A High Street Retail Project serving Lavanya Greens Residency and the National Highway.
+                </p>
+                <div class="header-buttons">
+                    <a href="#overview" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<section id="overview" class="overview">
-    <div class="container">
-        <h2>Project Overview</h2>
-        <div class="overview-content">
-            <div class="text-content">
-                <p>Anuradha Walk Street is the epitome of convenience and lifestyle, strategically designed to serve the
-                    residents of Lavanya Greens Residency and the bustling traffic from the National Highway. This G+4
-                    retail complex features 96 versatile shops, providing everything from everyday essentials to unique
-                    lifestyle offerings. It is a vibrant space where business meets community, creating an ecosystem of
-                    interconnected growth and convenience.</p>
-                <p>Designed with the needs of the local community in mind, Anuradha Walk Street offers a wide array of
-                    retail shops catering to daily needs, lifestyle, and entertainment. With 96 shops of 12x12 (144
-                    SQ.FT.) and multiples, this retail complex ensures that everything is within easy reach. Whether
-                    you're looking for groceries, medical supplies, or simply want to enjoy a meal or movie, Anuradha
-                    Walk Street has you covered.</p>
-                <ul>
-                    <li><strong>Plot Area:</strong> 11,500 SQ.FT.</li>
-                    <li><strong>Ground Coverage:</strong> 5,000 SQ.FT.</li>
-                    <li><strong>Parking Area:</strong> 6,500 SQ.FT.</li>
-                </ul>
-                <p>Anuradha Walk Street is not just a retail space; it’s a dynamic hub that connects the commercial,
-                    residential, and recreational aspects of this ecosystem.</p>
-            </div>
-            <div class="image-content">
-                <img src="/assets/images/homepage/Anuradha-Walk-Street.jpg" alt="Anuradha Walk Street" />
+    <section id="overview" class="overview">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="overview-content">
+                <div class="text-content">
+                    <p>Anuradha Walk Street is the epitome of convenience and lifestyle, strategically designed to serve
+                        the
+                        residents of Lavanya Greens Residency and the bustling traffic from the National Highway. This
+                        G+4
+                        retail complex features 96 versatile shops, providing everything from everyday essentials to
+                        unique
+                        lifestyle offerings. It is a vibrant space where business meets community, creating an ecosystem
+                        of
+                        interconnected growth and convenience.</p>
+                    <p>Designed with the needs of the local community in mind, Anuradha Walk Street offers a wide array
+                        of
+                        retail shops catering to daily needs, lifestyle, and entertainment. With 96 shops of 12x12 (144
+                        SQ.FT.) and multiples, this retail complex ensures that everything is within easy reach. Whether
+                        you're looking for groceries, medical supplies, or simply want to enjoy a meal or movie,
+                        Anuradha
+                        Walk Street has you covered.</p>
+                    <ul>
+                        <li><strong>Plot Area:</strong> 11,500 SQ.FT.</li>
+                        <li><strong>Ground Coverage:</strong> 5,000 SQ.FT.</li>
+                        <li><strong>Parking Area:</strong> 6,500 SQ.FT.</li>
+                    </ul>
+                    <p>Anuradha Walk Street is not just a retail space; it’s a dynamic hub that connects the commercial,
+                        residential, and recreational aspects of this ecosystem.</p>
+                </div>
+                <div class="image-content">
+                    <img src="/assets/images/homepage/Anuradha-Walk-Street.jpg" alt="Anuradha Walk Street" />
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="shops" class="shops">
-    <div class="container">
-        <h2>Shops Available</h2>
-        <p class="section-description">The complex is designed to house shops for a variety of services, from grocery
-            stores to food outlets. The following businesses will be part of the development:</p>
-        <ul class="shop-list">
-            <li>Grocery Stores & Milk Shops</li>
-            <li>ATM & Mobile Recharge Services</li>
-            <li>Haircutting Salons</li>
-            <li>Medical Stores & Doctor Chambers</li>
-            <li>A Little Cinema Theatre for entertainment</li>
-            <li>Restaurants & Ice Cream Parlours</li>
-            <li>Small Cafes & Fast Food (Burgers)</li>
-            <li>Clothing & Footwear Shops</li>
-            <li>Optical Stores & Mobile Shops</li>
-            <li>...and much more!</li>
-        </ul>
-    </div>
-</section>
+    <section id="shops" class="shops">
+        <div class="container">
+            <h2>Shops Available</h2>
+            <p class="section-description">The complex is designed to house shops for a variety of services, from
+                grocery
+                stores to food outlets. The following businesses will be part of the development:</p>
+            <ul class="shop-list">
+                <li>Grocery Stores & Milk Shops</li>
+                <li>ATM & Mobile Recharge Services</li>
+                <li>Haircutting Salons</li>
+                <li>Medical Stores & Doctor Chambers</li>
+                <li>A Little Cinema Theatre for entertainment</li>
+                <li>Restaurants & Ice Cream Parlours</li>
+                <li>Small Cafes & Fast Food (Burgers)</li>
+                <li>Clothing & Footwear Shops</li>
+                <li>Optical Stores & Mobile Shops</li>
+                <li>...and much more!</li>
+            </ul>
+        </div>
+    </section>
 
-<section id="location" class="location">
-    <div class="container">
-        <h2>Strategic Location & Accessibility</h2>
-        <p>Anuradha Walk Street enjoys a prime location, positioned just 80 feet away from both Shri Naveen Chambers and
-            Lavanya Greens Residency. This perfect location connects the National Highway directly to the heart of
-            Lavanya Greens, making it easily accessible to both the residents and the passing traffic.</p>
-    </div>
-</section>
+    <section id="location" class="location">
+        <div class="container">
+            <h2>Strategic Location & Accessibility</h2>
+            <p>Anuradha Walk Street enjoys a prime location, positioned just 80 feet away from both Shri Naveen Chambers
+                and
+                Lavanya Greens Residency. This perfect location connects the National Highway directly to the heart of
+                Lavanya Greens, making it easily accessible to both the residents and the passing traffic.</p>
+        </div>
+    </section>
 
-<section id="ecosystem" class="ecosystem">
-    <div class="container">
-        <h2>The Ecosystem of Growth: All Phases Connected</h2>
-        <p>At Sood Infra Private Limited, we believe in building spaces that foster connectivity and community. The
-            ecosystem of Phase 1: Shri Naveen Chambers, Phase 2: Lavanya Greens Residency, and Phase 3: Anuradha Walk
-            Street forms a cohesive, interconnected environment where each phase complements the other:</p>
-        <ul>
-            <li><strong>Phase 1:</strong> Shri Naveen Chambers – A pure commercial project that anchors the area with
-                high-quality business spaces.</li>
-            <li><strong>Phase 2:</strong> Lavanya Greens Residency – A pure residential development, offering modern
-                homes and a lifestyle centred around comfort, luxury, and convenience.</li>
-            <li><strong>Phase 3:</strong> Anuradha Walk Street – A vibrant retail complex that serves as the heartbeat
-                of the community, providing essential services and entertainment, ensuring that every resident and
-                visitor’s needs are met.</li>
-        </ul>
-        <p>Together, these projects create a holistic ecosystem where every phase connects seamlessly, allowing people
-            to work, live, and thrive in harmony. The concept of " जीवो जीवस्य जीवनम् " (Life is interconnected through
-            life) resonates through this design – where the commercial, residential, and retail spaces come together to
-            create a balanced and thriving environment for all.</p>
-    </div>
-</section>
+    <section id="ecosystem" class="ecosystem">
+        <div class="container">
+            <h2>The Ecosystem of Growth: All Phases Connected</h2>
+            <p>At Sood Infra Private Limited, we believe in building spaces that foster connectivity and community. The
+                ecosystem of Phase 1: Shri Naveen Chambers, Phase 2: Lavanya Greens Residency, and Phase 3: Anuradha
+                Walk
+                Street forms a cohesive, interconnected environment where each phase complements the other:</p>
+            <ul>
+                <li><strong>Phase 1:</strong> Shri Naveen Chambers – A pure commercial project that anchors the area
+                    with
+                    high-quality business spaces.</li>
+                <li><strong>Phase 2:</strong> Lavanya Greens Residency – A pure residential development, offering modern
+                    homes and a lifestyle centred around comfort, luxury, and convenience.</li>
+                <li><strong>Phase 3:</strong> Anuradha Walk Street – A vibrant retail complex that serves as the
+                    heartbeat
+                    of the community, providing essential services and entertainment, ensuring that every resident and
+                    visitor’s needs are met.</li>
+            </ul>
+            <p>Together, these projects create a holistic ecosystem where every phase connects seamlessly, allowing
+                people
+                to work, live, and thrive in harmony. The concept of " जीवो जीवस्य जीवनम् " (Life is interconnected
+                through
+                life) resonates through this design – where the commercial, residential, and retail spaces come together
+                to
+                create a balanced and thriving environment for all.</p>
+        </div>
+    </section>
 
-<section id="cta" class="cta">
-    <div class="container">
-        <h2>Book Your Shop at Anuradha Walk Street</h2>
-        <p class="cta-description">With strategic location, modern infrastructure, and a diverse range of businesses,
-            Anuradha Walk Street offers the perfect opportunity for retailers and entrepreneurs to set up shop in a
-            thriving community. Whether you’re looking to start a new venture or expand an existing one, this retail
-            complex offers a dynamic and vibrant environment.</p>
-        <button class="btn-book">Book Now</button>
-    </div>
-</section>
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Book Your Shop at Anuradha Walk Street</h2>
+            <p class="cta-description">With strategic location, modern infrastructure, and a diverse range of
+                businesses,
+                Anuradha Walk Street offers the perfect opportunity for retailers and entrepreneurs to set up shop in a
+                thriving community. Whether you’re looking to start a new venture or expand an existing one, this retail
+                complex offers a dynamic and vibrant environment.</p>
+            <button class="btn-book">Book Now</button>
+        </div>
+    </section>
 
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2>Image Gallery</h2>
-        <div class="images">
-            <img src="/assets/images/projectgellery/Anuradha-Project1.jpg" alt="Project Image 1" class="gallery-img">
-            <img src="/assets/images/projectgellery/Anuradha-Project2.jpg" alt="Project Image 2" class="gallery-img">
-            <img src="/assets/images/projectgellery/Anuradha-Project3.jpg" alt="Project Image 3" class="gallery-img">
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Image Gallery</h2>
+            <div class="images">
+                <img src="/assets/images/projectgellery/Anuradha-Project1.jpg" alt="Project Image 1"
+                    class="gallery-img">
+                <img src="/assets/images/projectgellery/Anuradha-Project2.jpg" alt="Project Image 2"
+                    class="gallery-img">
+                <img src="/assets/images/projectgellery/Anuradha-Project3.jpg" alt="Project Image 3"
+                    class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Popup -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img class="modal-img" id="modalImg" src="" alt="Large Image">
         </div>
     </div>
-</section>
-
-<!-- Modal for Image Popup -->
-<div class="modal" id="imageModal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-img" id="modalImg" src="" alt="Large Image">
-    </div>
-</div>
 
 
     <footer>
@@ -743,7 +775,8 @@ h2 {
                         <li><a href="/pages/contact.html">Contact Form</a></li>
                         <li><a href="mailto:admin@soodinfra.com">Email: admin@soodinfra.com</a></li>
                         <li><a href="tel:+917049325000">Phone: 70493 25000</a></li>
-                        <li><a href="/pages/contact.html">Address: Shri Naveen Chambers, Near Satija Petrol Pump, Nagpur Road, Chhindwara, Madhya Pradesh, PIN: 480001</a></li>
+                        <li><a href="/pages/contact.html">Address: Shri Naveen Chambers, Near Satija Petrol Pump, Nagpur
+                                Road, Chhindwara, Madhya Pradesh, PIN: 480001</a></li>
                     </ul>
                 </div>
             </div>

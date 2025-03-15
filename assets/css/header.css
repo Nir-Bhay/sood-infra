@@ -260,14 +260,50 @@ body.mobile-active {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10000;
+    overflow: hidden;
 }
 
-.preloader.active {
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 200px;
+    height: auto;
     display: flex;
+}
+
+/* Left & Right Image Styling */
+.left-half,
+.right-half {
+    position: absolute;
+    width: 100%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Left Half Initial Position */
+.left-half {
+    clip-path: inset(0 50% 0 0);
+    left: 0;
+}
+
+/* Right Half Initial Position */
+.right-half {
+    clip-path: inset(0 0 0 50%);
+    right: 0;
+}
+
+/* Animation - Move Halves Apart and Disappear */
+.preloader.active .left-half {
+    transform: translateX(-150%);
+    opacity: 0;
+}
+
+.preloader.active .right-half {
+    transform: translateX(150%);
+    opacity: 0;
 }
 
 .loader {

@@ -1,26 +1,22 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-  
     const preloader = document.querySelector('.preloader');
 
-  
+    // Show preloader on page load
+    preloader.classList.add('active');
 
-    // Simulate loading with preloader
-    document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            preloader.classList.add('active');
-            setTimeout(() => {
-                preloader.classList.remove('active');
-                window.location.href = e.target.href;
-            }, 1000); // Adjust delay as needed
+    // Hide preloader after animation
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 1000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.social-icon').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent interference from other scripts
         });
     });
 });
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
@@ -62,10 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-// // // JavaScript code to show the scroll-to-top button and handle the smooth scroll
-
+// JavaScript code to show the scroll-to-top button and handle the smooth scroll
 
 const toggleBackToTopButton = () => {
     backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
@@ -91,9 +84,6 @@ if (backToTopButton) {
     });
 }
 
-// // Event listeners
-// window.addEventListener('scroll', toggleBackToTopButton);
-// backToTopButton.addEventListener('click', scrollToTop);
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -102,6 +92,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-
-

@@ -16,9 +16,17 @@
     <meta property="og:title" content="Sood Infra - Real Estate & Construction in Chhindwara">
     <meta property="og:description"
         content="Sood Infra provides top-notch real estate and construction services in Chhindwara. Building Dreams, Creating Value.">
-    <meta property="og:image" content="https://soodinfra.com/assets/images/og-image.jpg">
+    <meta property="og:image" content="/assets/images/servives/logo.webp">
     <meta property="og:url" content="https://soodinfra.com">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sood Infra - Real Estate & Construction in Chhindwara">
+    <meta name="twitter:description"
+        content="Sood Infra provides top-notch real estate and construction services in Chhindwara. Building Dreams, Creating Value.">
+    <meta name="twitter:image" content="/assets/images/servives/logo.webp">
+
     <!-- Canonical Link -->
     <link rel="canonical" href="https://soodinfra.com">
 
@@ -38,6 +46,7 @@
 
     <!-- Page Title -->
     <title>Sood Infra - Real Estate & Construction in Chhindwara</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-48FL9ZZXYE"></script>
     <script>
@@ -47,8 +56,28 @@
 
         gtag('config', 'G-48FL9ZZXYE');
     </script>
-</head>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sood Infra",
+        "url": "https://soodinfra.com",
+        "logo": "https://soodinfra.com/assets/images/servives/logo.webp",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-7049325000",
+            "contactType": "Customer Service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/soodinfra/",
+            "https://www.instagram.com/soodinfra/",
+            "https://wa.me/7049325000"
+        ]
+    }
+    </script>
+</head>
 
 
 <body>
@@ -57,15 +86,16 @@
 
 
     <!-- Social Icons -->
-    <!-- Social Icons -->
     <div class="social-icons">
-        <a href="https://wa.me/7049325000" target="_blank" class="social-icon whatsapp">
+        <a href="https://wa.me/7049325000" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp">
             <img src="/assets/images/icons/icons8-whatsapp.svg" alt="WhatsApp">
         </a>
-        <a href="https://www.instagram.com/soodinfra/" target="_blank" class="social-icon instagram">
+        <a href="https://www.instagram.com/soodinfra/" target="_blank" rel="noopener noreferrer"
+            class="social-icon instagram">
             <img src="/assets/images/icons/icons8-instagram.svg" alt="Instagram">
         </a>
-        <a href="https://www.facebook.com/soodinfra/" target="_blank" class="social-icon facebook">
+        <a href="https://www.facebook.com/soodinfra/" target="_blank" rel="noopener noreferrer"
+            class="social-icon facebook">
             <img src="/assets/images/icons/icons8-linkedin.svg" alt="Facebook">
         </a>
     </div>
@@ -184,8 +214,12 @@
         </ul>
     </div>
     <!-- Preloader -->
+
     <div class="preloader">
-        <img src="/assets/images/about_mission/Infinity@1x-1.8s-200px-200px (1).svg" alt="Loading Animation">
+        <div class="image-container">
+            <img src="/assets/images/servives/logo.webp" alt="Loading Animation" class="left-half">
+            <img src="/assets/images/servives/logo.webp" alt="Loading Animation" class="right-half">
+        </div>
     </div>
 
     <button id="back-to-top"><img src="/assets/images/banners/up_arrow.png" alt="Up"></button>
@@ -193,6 +227,15 @@
 
     <!-- <div id="header"></div> -->
     <section class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active"
+                style="background-image: url('/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp');">
+            </div>
+            <div class="slide" style="background-image: url('/assets/images/homepage/about-us-image.webp');"></div>
+            <div class="slide"
+                style="background-image: url('/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp');">
+            </div>
+        </div>
         <div class="hero-content">
             <h2>Building Dreams, Creating Value</h2>
             <p>Your trusted partner in building the future you deserve.</p>
@@ -402,8 +445,7 @@
             </div>
             <div class="footer-links">
                 <div class="footer-column">
-                    <h3>About Sood Infra</h3>
-
+                    <h5>About Sood Infra</h5>
                     <ul>
                         <li><a href="/pages/about.html#story">Our Story</a></li>
                         <li><a href="/pages/about.html#management">Team</a></li>
@@ -413,8 +455,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Services</h3>
-
+                    <h5>Our Services</h5>
                     <ul>
                         <li><a href="/pages/services.html">Real Estate</a></li>
                         <li><a href="/pages/services.html">Construction</a></li>
@@ -424,8 +465,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Projects</h3>
-
+                    <h5>Our Projects</h5>
                     <ul>
                         <li><a href="/pages/projects.html">Residential Projects</a></li>
                         <li><a href="/pages/projects.html">Commercial Projects</a></li>
@@ -435,24 +475,22 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-
                     <ul>
                         <li><a href="/pages/contact.html">Contact Form</a></li>
                         <li><a href="mailto:admin@soodinfra.com">Email: admin@soodinfra.com</a></li>
                         <li><a href="tel:+917049325000">Phone: 70493 25000</a></li>
                         <li><a href="/pages/contact.html">Address: Shri Naveen Chambers, Near Satija Petrol Pump, Nagpur
                                 Road, Chhindwara, Madhya Pradesh, PIN: 480001
-                                रोड, छिंदवाड़ा - 480001</a></li>
+                            </a></li>
                     </ul>
                 </div>
             </div>
-
-
-
             <p>&copy; 2024 Sood Infra. All rights reserved.</p>
             <p><a href="/index.html">Privacy Policy</a> | <a href="/index.html">Terms of Service</a></p>
         </div>
     </footer>
+    <br>
+
 </body>
 
 <script src="../assets/js/scripts.js"></script>

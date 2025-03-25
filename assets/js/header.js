@@ -1,14 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const preloader = document.querySelector('.preloader');
-
-    // Show preloader on page load
-    preloader.classList.add('active');
-
-    // Hide preloader after animation
+window.addEventListener("load", function () {
     setTimeout(() => {
-        preloader.style.display = "none";
-    }, 1000);
+        document.querySelector(".preloader").style.opacity = "0";
+        setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+            document.querySelector(".content").style.display = "block";
+            setTimeout(() => {
+                document.querySelector(".content").style.opacity = "1";
+            }, 100);
+        }, 500); // Fade-out time
+    }, 1000); // Delay before hiding the preloader
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.social-icon').forEach(icon => {

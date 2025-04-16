@@ -11,18 +11,6 @@
 // Toggle the mobile menu
 // Toggle the mobile menu
 // Toggle the mobile menu
-document.addEventListener('DOMContentLoaded', function () {
-    const slides = document.querySelectorAll('.hero .slide');
-    let currentSlide = 0;
-
-    function showNextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(showNextSlide, 3000); // Change image every 3 seconds
-});
 
 
 const pastProjects = [

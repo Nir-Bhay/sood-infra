@@ -121,6 +121,8 @@ footer p,
     font-size: 1rem;
 }
 footer .footer-logo img {
+    width: 240px;
+    height: 200px;
     filter: invert(1) grayscale(100%) contrast(100%);
 }
 /* Accessibility Enhancements */

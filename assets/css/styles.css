@@ -341,7 +341,7 @@ color: var(--text-color);
     }
 }
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -375,8 +375,8 @@ color: var(--text-color);
         opacity: 1;
         transform: translateX(0);
     }
-}
-
+} */
+/* 
 .about-us h2 {
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
@@ -398,7 +398,7 @@ color: var(--text-color);
     opacity: 0;
     animation: slideInFromRight 1.2s ease-in-out forwards;
     animation-delay: 0.5s;
-}
+} */
 
 .about-cta {
     opacity: 0;

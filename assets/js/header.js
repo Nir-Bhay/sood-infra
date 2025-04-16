@@ -1,15 +1,18 @@
+document.body.classList.add('loading'); // disable scroll early
+
 window.addEventListener("load", function () {
+    const preloader = document.querySelector(".preloader");
+    document.body.classList.remove('loading'); // enable scroll again
+
+    // Hide immediately with a short fade (optional)
+    preloader.style.transition = "opacity 0.3s ease";
+    preloader.style.opacity = "0";
+
     setTimeout(() => {
-        document.querySelector(".preloader").style.opacity = "0";
-        setTimeout(() => {
-            document.querySelector(".preloader").style.display = "none";
-            document.querySelector(".content").style.display = "block";
-            setTimeout(() => {
-                document.querySelector(".content").style.opacity = "1";
-            }, 100);
-        }, 500); // Fade-out time
-    }, 1000); // Delay before hiding the preloader
+        preloader.style.display = "none";
+    }, 300); // Matches the fade time
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

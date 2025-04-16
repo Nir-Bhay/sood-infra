@@ -251,26 +251,30 @@ body.mobile-active {
         transform: translateY(0);
     }
 }
+
+
+body.loading {
+    overflow: hidden;
+}
+
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #efefef;
-    transition: opacity 0.5s ease-out;
+    background-color: #ffffff;
+    /* cleaner background */
 }
 
 .preloader img {
     width: 100px;
-    /* Adjust as needed */
     height: auto;
-    animation: spin 2s linear infinite;
-    /* filter: invert(1); */
-    /* Inverting colors to make black */
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {

@@ -24,15 +24,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 20px;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+nav .logo {
+    width: auto;
+    /* or remove this line if not needed */
+    height: auto;
+    display: flex;
+    align-items: center;
+}
 
 nav .logo img {
-    height: 55px;
+    height: 80px;
+    /* increase logo size */
     width: auto;
+    margin-right: 10px;
+    margin-top: -7px;
+    /* adjust upward to keep nav height unaffected */
+    margin-bottom: -7px;
+    /* optional: makes it feel vertically centered */
+    object-fit: contain;
 }
 
 nav ul {

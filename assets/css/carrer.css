@@ -143,6 +143,7 @@ section {
     #why-sood-infra h2 {
         font-size: 2rem;
         /* Adjust header size */
+     
     }
 
     .card h3 {
@@ -434,6 +435,7 @@ section {
     header{
         margin-top: 10%;
     }
+    header h1 {margin-top: 30px;}
         #apply-form {
         padding: 20px;
     }

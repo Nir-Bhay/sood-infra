@@ -38,7 +38,7 @@ header {
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
     margin-top: 4%;
-    background: #0d4b5d;
+    background: #151B54;
     color: #ffffff;
 }
 
@@ -122,7 +122,7 @@ header h1 {
 /* Icon Styles */
 .fas {
     font-size: 1.2em;
-    color: #0d4b5d;
+    color: #151B54;
 }
 
 @keyframes fadeIn {
@@ -264,7 +264,7 @@ header h1 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #0d4b5d;
+    background-color: #151B54;
     color: #fff;
     transition: background-color 0.3s;
 }
@@ -286,7 +286,7 @@ header h1 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #0d4b5d;
+    background-color: #151B54;
     color: #fff;
     transition: background-color 0.3s;
 }
@@ -311,6 +311,6 @@ header h1 {
 .faq-category h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: #0d4b5d;
+    color: #151B54;
 }
 

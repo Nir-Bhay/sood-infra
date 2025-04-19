@@ -4,7 +4,7 @@
   --secondary-bg: #f7f7f7;
   --text-color: #333333;
   --secondary-text: #666666;
-  --accen-color: #0d4b5d;
+  --accen-color: #151B54;
   --transition-speed: 0.3s;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
@@ -302,7 +302,7 @@ section p {
 .milestone h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #0d4b5d;
+  color: #151B54;
 }
 
 .milestone p {
@@ -521,7 +521,7 @@ section p {
 
 .usp-icon h3 {
   font-size: 1.5rem;
-  color: #0d4b5d;
+  color: #151B54;
   margin-bottom: 0.5rem;
 }
 
@@ -586,7 +586,7 @@ section p {
 h2 {
   text-align: center;
   margin: 1em 0;
-  color: #0d4b5d;
+  color: #151B54;
 }
 
 #management {
@@ -666,7 +666,7 @@ h2 {
 
 .social-links a {
   margin-right: 0.5em;
-  color: #0d4b5d; /* LinkedIn Blue */
+  color: #151B54; /* LinkedIn Blue */
   font-size: 1.5em;
   transition: color 0.3s ease;
 }
@@ -759,7 +759,7 @@ h2 {
 .team-card strong {
   display: block;
   font-size: 1rem;
-  color: #0066cc;
+  color: #151B54;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
@@ -770,7 +770,7 @@ h2 {
 }
 
 .team-card .social-links a {
-  color: #0066cc;
+  color: #151B54;
   font-size: 1.2rem;
   margin: 0 0.5em;
   transition: color 0.3s ease;

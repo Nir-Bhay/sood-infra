@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    background: #0d4b5d;
+    background: #151B54;
     color: white;
     padding: 2rem 2rem;
     text-align: justify;
@@ -91,7 +91,7 @@ section {
 
 .card h3 {
     font-size: 1.5rem;
-    color: #0d4b5d;
+    color: #151B54;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -220,18 +220,18 @@ section {
 
 .quality i {
     font-size: 2.5rem;
-    color: #0d4b5d;
+    color: #151B54;
     margin-bottom: 15px;
     transition: color 0.3s ease;
 }
 
 .quality:hover i {
-    color: #0d4b5d;
+    color: #151B54;
 }
 
 .quality h3 {
     font-size: 1.5rem;
-    color: #0d4b5d;
+    color: #151B54;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -291,7 +291,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, #000000, #0d4b5d);
+    background: linear-gradient(to right, #000000, #151B54);
     transition: transform 0.3s ease;
     transform: scaleX(0);
     transform-origin: left;
@@ -303,7 +303,7 @@ section {
 
 .position-card h3 {
     font-size: 1.5rem;
-    color: #0d4b5d;
+    color: #151B54;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -372,7 +372,7 @@ section {
 #apply-form input:focus,
 #apply-form select:focus,
 #apply-form textarea:focus {
-    border-color: #0d4b5d;
+    border-color: #151B54;
 }
 
 #apply-form textarea {
@@ -381,7 +381,7 @@ section {
 }
 
 #apply-form button {
-    background-color: #0d4b5d;
+    background-color: #151B54;
     color: #fff;
     padding: 15px 20px;
     border: none;

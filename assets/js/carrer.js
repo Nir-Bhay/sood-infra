@@ -22,30 +22,58 @@ function filterJobs() {
     });
 }
 
-document.getElementById('apply-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+function validateApplyForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const position = document.getElementById('position').value.trim();
+    const resume = document.getElementById('resume').files[0];
+    const message = document.getElementById('message').value.trim();
 
-    const formData = new FormData(this);
+    if (name.length < 2) {
+        alert("Name must be at least 2 characters.");
+        return false;
+    }
 
-    // Optionally, add any validation here before sending
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
 
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            alert('Thank you for your application! We will be in touch soon.');
-            this.reset();
-        } else {
-            alert('There was a problem submitting your application. Please try again.');
-        }
-    }).catch(error => {
-        alert('There was a problem submitting your application. Please try again.');
-    });
-});
+    if (phone && !/^[0-9]{10,15}$/.test(phone)) {
+        alert("Phone must be 10 to 15 digits.");
+        return false;
+    }
+
+    if (position === "") {
+        alert("Please select a position.");
+        return false;
+    }
+
+    // if (!resume) {
+    //     alert("Please upload your resume (PDF, DOC, DOCX).");
+    //     return false;
+    // } else {
+    //     const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    //     if (!allowedTypes.includes(resume.type)) {
+    //         alert("Resume must be PDF or Word document.");
+    //         return false;
+    //     }
+    // }
+
+    if (message.length < 20) {
+        alert("Cover Letter must be at least 20 characters long.");
+        return false;
+    }
+
+    // If everything is valid
+    return true;
+}
+
+
+
+
 
 const backToTopButton = document.getElementById('back-to-top');
 

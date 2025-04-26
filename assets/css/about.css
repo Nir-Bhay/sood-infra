@@ -589,44 +589,23 @@ h2 {
   color: #151B54;
 }
 
-#management {
-  padding: 2em;
-  background-color: #f9f9f9;
-}
-
-#management h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  color: #333;
-}
-
-#management p {
-  text-align: justify; /* Updated to justify text alignment */
-  font-size: 1.2em;
-  margin-bottom: 2em;
-  color: #666;
-}
-
 .management-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  /* important: both sides equal height */
   background: #fff;
-  border-radius: 10px;
-  margin: 1em 0;
-  padding: 1.5em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Initial state for animation */
-.management-card {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5em auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s ease;
+  /* max-width: 900px; */
+  width: 90%;
+  height: 450px;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-in-out;
 }
 
-/* Active state when in view */
 .management-card.active {
   opacity: 1;
   transform: translateY(0);
@@ -634,56 +613,91 @@ h2 {
 
 .management-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.management-card img {
-  width: 250px;
-  height: 350px;
-  margin-right: 1.5em;
+.management-card .image-section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  /* CENTER horizontally */
+  align-items: center;
+  /* CENTER vertically */
+  /* background: #f5f5f5; */
+  /* (optional) halka background dena ho to */
+}
+
+.management-card .image-section img {
+  width: 260px;
+  /* image ko bhi thoda shrink */
+  height: auto;
+  /* maintain original aspect ratio */
+  max-height: 90%;
   object-fit: cover;
+  display: block;
 }
 
-.details {
-  flex: 1;
+.management-card .details {
+  /* flex: 1; */
+  /* text will take half space */
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .details h3 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
-  color: #333;
+  color: #222;
 }
 
 .details p {
   font-size: 1em;
   margin-bottom: 0.5em;
-  color: #666;
+  color: #555;
 }
 
 .social-links {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .social-links a {
-  margin-right: 0.5em;
-  color: #151B54; /* LinkedIn Blue */
+  margin-right: 0.7em;
+  color: #0A66C2;
   font-size: 1.5em;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #005582;
+  color: #004182;
 }
 
+/* Responsive */
+/*  Responsive for Mobile Devices */
 @media (max-width: 768px) {
   .management-card {
     flex-direction: column;
-    text-align: center;
+    height: auto;
   }
 
-  .management-card img {
-    margin-bottom: 1em;
-    margin-right: 0;
+  .management-card .image-section {
+    width: 100%;
+    height: 50%;
+    padding: 1em 0;
+  }
+
+  .management-card .image-section img {
+    width: 50%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  .management-card .details {
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
   }
 
   .details h3 {
@@ -691,10 +705,15 @@ h2 {
   }
 
   .details p {
-    font-size: 0.9em;
+    font-size: 0.95em;
+  }
+
+  .social-links {
+    margin-top: 1em;
+    justify-content: center;
+    display: flex;
   }
 }
-
 /* Team Section */
 #team {
   padding: 3em 2em;

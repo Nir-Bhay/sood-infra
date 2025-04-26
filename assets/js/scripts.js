@@ -16,17 +16,17 @@
 const pastProjects = [
     {
         title: "Shri Naveen Chambers",
-        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
+        imgUrl: "assets/images/homepage/DON’T WAIT TO BUY REAL ESTATE BUY REAL ESTATE AND WAIT (1).webp",
         description: "A contemporary commercial complex currently under development, providing cutting-edge office spaces and business facilities. Shri Naveen Chambers is tailored for progressive businesses seeking both convenience and innovation."
     },
     {
         title: "Anuradha Walk Street",
-        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
+        imgUrl: "/assets/images/homepage/Anuradha walk street by sood infra chhindwara.webp",
         description: "A dynamic commercial development characterized by its pedestrian-centric design, featuring retail establishments and dining venues. Anuradha Walk Street offers a distinctive urban experience that harmoniously combines leisure and business prospects."
     },
     {
         title: "Lavanya Greens Residency",
-        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
+        imgUrl: "/assets/images/homepage/Lavanya Greens Residency by soodinfra form chhindwara.webp",
         description: "A residential development crafted with a focus on luxury and sustainability. Lavanya Greens Residency offers contemporary residences, beautifully landscaped gardens, and state-of-the-art energy-efficient systems."
     }
 ];

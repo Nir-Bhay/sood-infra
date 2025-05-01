@@ -20,12 +20,12 @@ const pastProjects = [
         description: "A contemporary commercial complex currently under development, providing cutting-edge office spaces and business facilities. Shri Naveen Chambers is tailored for progressive businesses seeking both convenience and innovation."
     },
     {
-        title: "Anuradha Walk Street",
+        title: "Anuradha Walk Street - Proposed Plan",  // Modified title
         imgUrl: "/assets/images/homepage/Anuradha walk street by sood infra chhindwara.webp",
         description: "A dynamic commercial development characterized by its pedestrian-centric design, featuring retail establishments and dining venues. Anuradha Walk Street offers a distinctive urban experience that harmoniously combines leisure and business prospects."
     },
     {
-        title: "Lavanya Greens Residency",
+        title: "Lavanya Greens Residency - Proposed Plan",  // Modified title
         imgUrl: "/assets/images/homepage/Lavanya Greens Residency by soodinfra form chhindwara.webp",
         description: "A residential development crafted with a focus on luxury and sustainability. Lavanya Greens Residency offers contemporary residences, beautifully landscaped gardens, and state-of-the-art energy-efficient systems."
     }
@@ -39,20 +39,18 @@ const ongoingProjects = [
         description: "Located on the Nagpur-Chhindwara Highway, Shri Naveen Chambers is a landmark commercial property with excellent connectivity and strategic placement for maximum business visibility."
     },
     {
-        title: "Shri Naveen Towers",
-        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
-        description: "An ongoing premium commercial tower offering state-of-the-art office spaces and business amenities. Shri Naveen Towers is designed for modern enterprises looking for convenience and innovation."
+        title: "Housing Project 1",
+        imgUrl: "/assets/images/Project Gallery/ovs12d3ewxygrhlmlr9p.webp",
+        description: "A modern residential building offering comfortable living spaces with essential amenities. This project is designed to provide residents with a harmonious blend of convenience and quality."
     },
 
-
     {
-        title: "Shri Omkaar Residency",
-        imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
-        description: "A residential community designed with luxury and sustainability in mind. Shri Omkaar Residency features modern homes, landscaped gardens, and advanced energy-saving systems."
+        title: "Housing Project 2",
+        imgUrl: "/assets/images/Project Gallery/sood-infra-luxury-flats-chhindwara.webp",
+        description: "A sustainable community with stylish homes, green spaces, and energy-efficient features. This project emphasizes eco-friendly construction, integrating renewable energy solutions and efficient water management systems."
     }
 
 ];
-
 
 
 const renderProjects = (projects, containerId) => {
@@ -60,19 +58,22 @@ const renderProjects = (projects, containerId) => {
     projects.forEach(project => {
         const portfolioItem = document.createElement('div');
         portfolioItem.className = 'portfolio-item';
+
         portfolioItem.innerHTML = `
-                <div class="portfolio-image">
-                    <img src="${project.imgUrl}" alt="${project.title}">
-                </div>
-                <div class="portfolio-content">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="read-more">Read More</div>
-                </div>
-            `;
+    <div class="portfolio-image">
+        <img src="${project.imgUrl}" alt="${project.title}  loading="lazy">
+        <a href="/pages/projects.html" class="read-more">Read More</a>
+    </div>
+    <div class="portfolio-content">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+    </div>
+`;
+
         gallery.appendChild(portfolioItem);
     });
 };
+
 
 renderProjects(pastProjects, 'past-projects-gallery');
 renderProjects(ongoingProjects, 'ongoing-projects-gallery');

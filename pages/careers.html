@@ -35,7 +35,7 @@
     <!-- Scripts -->
     <script defer src="../assets/js/carrer.js"></script>
     <script defer src="../assets/js/carrer.js"></script>
-    
+
     <script defer src="/assets/js/header.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-48FL9ZZXYE"></script>
@@ -91,8 +91,8 @@
                 <ul class="submenu">
                     <!-- <li><a href="/pages/projects.html#project-gallery">Construction</a></li>
                     <li><a href="">Product</a></li> -->
-                    <li><a href="/pages/projects.html#project-gallery">Residential Projects</a></li>
                     <li><a href="/pages/projects.html#project-gallery">Commercial Projects</a></li>
+                    <li><a href="/pages/projects.html#project-gallery">Residential Projects</a></li>
                     <li><a href="#projectgallery#gallery-section">Project Gallery</a></li>
                 </ul>
             </li>
@@ -149,8 +149,8 @@
                 <ul class="submenu">
                     <!-- <li><a href="/pages/projects.html#project-gallery">Construction</a></li>
                      <li><a href="">Product</a></li> -->
-                    <li><a href="/pages/projects.html#project-gallery">Residential Projects</a></li>
                     <li><a href="/pages/projects.html#project-gallery">Commercial Projects</a></li>
+                    <li><a href="/pages/projects.html#project-gallery">Residential Projects</a></li>
                     <li><a href="#projectgallery#gallery-section">Project Gallery</a></li>
                 </ul>
             </li>
@@ -196,7 +196,7 @@
 
 
     <header>
-        <h1>Join the Sood Infra Family-<h4><strong>Build Your Future with Us! </strong></h4>
+        <h1>Join The Sood Infra Family-<h4><strong>Build Your Future with Us! </strong></h4>
         </h1>
 
         <p>At Sood Infra, we’re not just building structures, we’re building futures. As we continue to lead the way in
@@ -274,33 +274,30 @@
     <section id="open-positions">
         <h2>Open Positions</h2>
         <div class="positions-grid">
-            <div class="position-card">
-                <h3>Project Managers</h3>
-                <p>Lead and oversee construction projects, ensuring timely and successful completion while maintaining
-                    high-quality standards.</p>
-            </div>
-            <div class="position-card">
-                <h3>Architects & Engineers</h3>
-                <p>Design and execute innovative, functional, and sustainable building solutions.</p>
-            </div>
-            <div class="position-card">
-                <h3>Sales & Marketing Professionals</h3>
-                <p>Promote our projects and connect with potential clients to drive growth.</p>
-            </div>
-            <div class="position-card">
-                <h3>Customer Service Representatives</h3>
-                <p>Ensure client satisfaction by addressing inquiries and providing exceptional support.</p>
-            </div>
-            <div class="position-card">
-                <h3>Construction Workers & Technicians</h3>
-                <p>Contribute to on-site construction activities with expertise and dedication.</p>
-            </div>
+
             <div class="position-card">
                 <h3>Accountant</h3>
                 <p>Manage bookkeeping, tax invoice collection, issuance, and handle tax filings and compliances.</p>
             </div>
+            <div class="position-card">
+                <h3>Sales Executive</h3>
+                <p>Engage directly with clients, explain services, and close sales to meet targets.</p>
+            </div>
+            <div class="position-card">
+                <h3>Sales Manager</h3>
+                <p>Lead the sales team, develop strategies, and ensure revenue growth and customer satisfaction.</p>
+            </div>
+            <div class="position-card">
+                <h3>Civil Engineer</h3>
+                <p>Plan, design, and manage construction projects, ensuring structural integrity and compliance.</p>
+            </div>
+            <div class="position-card">
+                <h3>Interior Designer</h3>
+                <p>Create aesthetically pleasing and functional interior spaces tailored to client needs.</p>
+            </div>
         </div>
     </section>
+
 
 
     <!-- Application Form Section -->
@@ -313,35 +310,37 @@
             submit your application</p>
         <br>
 
-    <form id="apply-form" action="https://formspree.io/f/mjkvwwpo" method="POST" enctype="multipart/form-data"
-        onsubmit="return validateApplyForm()">
-    
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required minlength="2">
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" title="Enter 10 to 15 digits">
-    
-        <label for="position">Position Applying For:</label>
-        <select id="position" name="position" required>
-            <option value="">Select Position</option>
-            <option value="sales-consultant">Real Estate Sales Consultant</option>
-            <option value="home-designer">Home Designer</option>
-            <option value="3d-rendering">3D Map Rendering Specialist</option>
-        </select>
-    
-        <!-- <label for="resume">Upload Resume (PDF or DOC):</label>
+        <form id="apply-form" action="https://formspree.io/f/mjkvwwpo" method="POST" enctype="multipart/form-data"
+            onsubmit="return validateApplyForm()">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="2">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" title="Enter 10 to 15 digits">
+
+            <label for="position">Position Applying For:</label>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="sales-executive">Sales Executive</option>
+                <option value="sales-manager">Sales Manager</option>
+                <option value="accountant">Accountant</option>
+                <option value="civil-engineer">Civil Engineer</option>
+                <option value="interior-designer">Interior Designer</option>
+            </select>
+
+            <!-- <label for="resume">Upload Resume (PDF or DOC):</label>
         <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required> -->
-    
-        <label for="message">Cover Letter:</label>
-        <textarea id="message" name="message" placeholder="Tell us why you'd be a great fit..." minlength="20"
-            required></textarea>
-    
-        <button type="submit">Submit Application</button>
-    </form>
+
+            <label for="message">Cover Letter:</label>
+            <textarea id="message" name="message" placeholder="Tell us why you'd be a great fit..." minlength="20"
+                required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
 
 
         <br>
@@ -389,9 +388,7 @@
                     <ul>
                         <li><a href="/pages/projects.html">Residential Projects</a></li>
                         <li><a href="/pages/projects.html">Commercial Projects</a></li>
-                        <li><a href="/pages/projects.html">Mixed-Use Developments</a></li>
-                        <li><a href="/pages/projects.html">Renovations</a></li>
-                        <li><a href="/pages/projects.html">Infrastructure Projects</a></li>
+                     
                     </ul>
                 </div>
                 <div class="footer-column">

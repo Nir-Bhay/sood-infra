@@ -638,12 +638,10 @@ h2 {
 }
 
 .management-card .details {
-  /* flex: 1; */
-  /* text will take half space */
   padding: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align items from the start, no center alignment */
 }
 
 .details h3 {
@@ -656,6 +654,7 @@ h2 {
   font-size: 1em;
   margin-bottom: 0.5em;
   color: #555;
+  margin-top: 0.2em; /* Ensures the text is right below the heading */
 }
 
 .social-links {
@@ -672,6 +671,7 @@ h2 {
 .social-links a:hover {
   color: #004182;
 }
+
 
 /* Responsive */
 /*  Responsive for Mobile Devices */

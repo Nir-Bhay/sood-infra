@@ -59,7 +59,8 @@ body {
     opacity: 1;
 }
 
-.hero::before {
+
+/* .hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -67,9 +68,8 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(21, 27, 84, 0.3);
-    /* was 0.5, now 0.6 for better readability */
     z-index: 1;
-}
+} */
 
 .hero-content {
     position: relative;

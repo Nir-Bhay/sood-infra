@@ -31,40 +31,47 @@ const pastProjects = [
         title: "Shri Naveen Chambers",
         motto: "निष्ठा धृति: सत्यम्",
         imgUrl: "assets/images/homepage/DON’T WAIT TO BUY REAL ESTATE BUY REAL ESTATE AND WAIT (1).webp",
-        description: "A contemporary commercial complex offering cutting-edge office spaces and business facilities. Designed for progressive businesses, it blends convenience with innovative infrastructure for modern enterprises." // 28 words
+        description: "A contemporary commercial complex offering cutting-edge office spaces and business facilities. Designed for progressive businesses, it blends convenience with innovative infrastructure for modern enterprises.",
+        link: "/pages/projects/Shri Naveen Chambers.html"
     },
     {
         title: "Anuradha Walk Street - Proposed Plan",
         motto: "नभ स्पर्श दीप्तम्",
         imgUrl: "/assets/images/homepage/Anuradha walk street by sood infra chhindwara.webp",
-        description: "A pedestrian-focused commercial hub with retail outlets and dining options. Anuradha Walk Street merges leisure and business opportunities, creating a vibrant urban ecosystem for visitors and entrepreneurs." // 27 words
+        description: "A pedestrian-focused commercial hub with retail outlets and dining options. Anuradha Walk Street merges leisure and business opportunities, creating a vibrant urban ecosystem for visitors and entrepreneurs.",
+        link: "/pages/projects/Anuradha Walk Street .html"
     },
     {
         title: "Lavanya Greens Residency - Proposed Plan",
         motto: "सहिता कार्यसाधिका",
         imgUrl: "/assets/images/homepage/Untitled design (1).webp",
-        description: "A luxury residential project emphasizing sustainability. Featuring modern homes, landscaped gardens, and energy-efficient systems, it redefines eco-conscious upscale living for discerning homeowners." // 27 words
+        description: "A luxury residential project emphasizing sustainability. Featuring modern homes, landscaped gardens, and energy-efficient systems, it redefines eco-conscious upscale living for discerning homeowners.",
+        link: "/pages/projects/Lavanya Greens Residency .html"
     }
 ];
+
 
 const ongoingProjects = [
     {
         title: "Shri Naveen Chambers",
         imgUrl: "/assets/images/homepage/Sood Infra , construction , Soodinfra office.webp",
-        description: "SStrategically positioned on Nagpur-Chhindwara Highway, this landmark commercial property offers premium office spaces with unmatched connectivity, prime visibility, and scalability for business growth." // 28 words
+        description: "Strategically positioned on Nagpur-Chhindwara Highway, this landmark commercial property offers premium office spaces with unmatched connectivity, prime visibility, and scalability for business growth.",
+        link: "/pages/projects/Shri Naveen Chambers.html"
     },
     {
         title: "Housing Project 1",
         imgUrl: "/assets/images/Project Gallery/Untitled design.webp",
-        description: "Ongoing premium development at Vardhman Florence Park featuring cutting-edge smart home technology, elegant minimalist designs, ustainable materials, and advanced energy-efficient systems for modern green living." // 29 words
+        description: "Ongoing premium development at Vardhman Florence Park featuring cutting-edge smart home technology, elegant minimalist designs, sustainable materials, and advanced energy-efficient systems for modern green living.",
+        link: "/pages/projects.html"
     },
     {
         title: "Housing Project 2",
         imgUrl: "/assets/images/Project Gallery/sood-infra-luxury-flats-chhindwara.webp",
-        description: "Progressing contemporary development in Khabari offering spacious open-plan living areas, stylish modular kitchens, ventilation systems, and space-optimized smart designs for sophisticated urban lifestyles." // 29 words
+        description: "Progressing contemporary development in Khabari offering spacious open-plan living areas, stylish modular kitchens, ventilation systems, and space-optimized smart designs for sophisticated urban lifestyles.",
+        link: "/pages/projects.html"
     }
-   
 ];
+
 
 
 const renderProjects = (projects, containerId) => {
@@ -74,16 +81,16 @@ const renderProjects = (projects, containerId) => {
         portfolioItem.className = 'portfolio-item';
 
         portfolioItem.innerHTML = `
-    <div class="portfolio-image">
-        <img src="${project.imgUrl}" alt="${project.title}" loading="lazy">
-        <a href="/pages/projects.html" class="read-more">Read More</a>
-    </div>
-    <div class="portfolio-content">
-        <h3>${project.title}</h3>
-        ${project.motto ? `<span class="motto">${project.motto}</span>` : ''}
-        <p>${project.description}</p>
-    </div>
-`;
+            <div class="portfolio-image">
+                <img src="${project.imgUrl}" alt="${project.title}" loading="lazy">
+                <a href="${project.link}" class="read-more">Read More</a>
+            </div>
+            <div class="portfolio-content">
+                <h3>${project.title}</h3>
+                ${project.motto ? `<span class="motto">${project.motto}</span>` : ''}
+                <p>${project.description}</p>
+            </div>
+        `;
         gallery.appendChild(portfolioItem);
     });
 };

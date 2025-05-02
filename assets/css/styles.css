@@ -291,12 +291,13 @@ body {
     font-size: 1rem;
     margin-bottom: 10px;
     display: flex;
-    align-items: center;
+    align-items:normal;
     gap: 10px;
+    text-align: left;
 }
 
 .about-highlights li::before {
-    content: '✓';
+    content: '✓ㅤ';
     color: var(--highlight-color);
     font-weight: bold;
 }
@@ -377,7 +378,7 @@ body {
 
     .about-highlights li strong {
 
-        min-width: 130px;
+        min-width: 100px;
         /* Adjust based on your longest title */
     }
 
@@ -527,6 +528,9 @@ body {
     }
 }
 
+
+
+
 .portfolio {
     text-align: center;
     background-color: var(--primary-color);
@@ -621,22 +625,32 @@ body {
 
 }
 
-.read-more {
+.portfolio-image .read-more {
     position: absolute;
-    top: 50%;
+    /* top: 0%;
+     */
+    bottom: 0%;;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0.8rem 1.2rem;
     background-color: var(--primary-color);
-    color: var(--neutral-white);
-    font-size: 1rem;
-    text-align: center;
-    display: none;
+    color: white;
+    padding: 0.6rem 1rem;
     border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    display: none;
+    transition: all 0.3s ease;
 }
-
+.portfolio-item:hover .read-more {
+    display: block;
+    opacity: 1;
+}
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
 /* Scroll Animation */
 @keyframes fadeInUp {
     from {
@@ -675,7 +689,7 @@ body {
 .portfolio-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     overflow: hidden;
 }
 
@@ -692,20 +706,32 @@ body {
 
 .portfolio-content {
     padding: 1rem;
-    text-align: left;
+    background-color: var(--neutral-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .portfolio-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
     color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
 }
-
+.portfolio-content .motto {
+    font-size: 0.95rem;
+    font-weight:700;
+    color: #444;
+    font-style: italic;
+}
 .portfolio-content p {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0 1rem;
     text-align: justify;
+    line-height: 1.5;
 }
 
 /* Read More button (clickable redirect) */
@@ -754,12 +780,7 @@ body {
     }
 }
 
-.testimonial-card {
-    padding: 1rem;
-    font-style: italic;
-    border: 1px solid #ddd;
-    margin: 1rem 0;
-}
+
 
 .usp-icons {
     display: flex;
@@ -769,84 +790,100 @@ body {
 .usp-icon {
     width: 20%;
 }
+section.ecosystem {
+    /* padding: 80px 0; */
+    background:var(--primary-color);
+    font-family: 'Segoe UI', sans-serif;
+}
 
-.blog {
+/* Container */
+.ecosystem .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
-    background-color: var(--primary-color);
-    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
 }
 
-.blog h2 {
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading */
+.ecosystem h2 {
     font-size: 2.5rem;
-    color: var(--neutral-white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+}
+.container h3 {
+    font-size:1.4rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
 }
 
-.blog-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.blog-card {
-
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    flex: 1 1 21%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    max-width: 300px;
-    background-color: var(--light-gray);
-}
-
-.blog-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.blog-card h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-.blog-card p {
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
+/* Paragraphs */
+.ecosystem p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
     text-align: justify;
-    /* Justify text alignment */
 }
 
-.blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* List Styling */
+.ecosystem ul {
+    padding-left: 1.5rem;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.95rem 1.8rem;
-    background-color: var(--neutral-white);
-    color: var(--text-color);
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    border: 1px solid;
+.ecosystem ul li {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
 }
 
-.btn:hover {
-    background-color: var(--primary-color);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.592);
-    color: white;
+.ecosystem ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .ecosystem .container {
+        padding: 1.5rem;
+    }
 
+    .ecosystem h2 {
+        font-size: 2rem;
+    }
 
+    .ecosystem p,
+    .ecosystem ul li {
+        font-size: 1rem;
+    }
+}
 
 .contact p,
 .social-media a {
@@ -880,12 +917,21 @@ body {
     text-align: justify;
     /* Justify text alignment */
 }
+.portfolio a{
+text-decoration: none;
+}
+
+.cta-content a {
+
+    text-decoration: none;
+    ;
+}
 
 .cta-btn {
     padding: 1rem 2.5rem;
     background-color: #ffffff;
     color: #151B54;
-    text-decoration: none;
+   
     font-size: 1.2rem;
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;

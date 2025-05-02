@@ -21,239 +21,245 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Reset and Basic Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-h1, h2, h3, h4 {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #1a1a1a;
-}
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
 
-/* Header Styling */
-header {
-    background-color: #e7e7e7;
-    padding: 10px 0;
-}
+        /* Header Styling */
+        header {
+            background-color: #e7e7e7;
+            padding: 10px 0;
+        }
 
-header .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        header .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
 
-header nav ul li {
-    margin: 0 15px;
-}
+        header nav ul li {
+            margin: 0 15px;
+        }
 
-header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-}
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-header nav ul li a:hover {
-    color: #f4f4f4;
-}
+        header nav ul li a:hover {
+            color: #f4f4f4;
+        }
 
-/* Hero Section */
-.hero {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 80px 0;
-    text-align: center;
-    margin-bottom: 30px;
-}
+        /* Hero Section */
+        .hero {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
 
-.hero p {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
 
-.hero .hero-content p {
-    font-style: italic;
-}
+        .hero .hero-content p {
+            font-style: italic;
+        }
 
-/* Main Content */
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.main-content h2 {
-    font-size: 32px;
-    color: #0b0b0b;
-    margin-bottom: 30px;
-}
+        .main-content h2 {
+            font-size: 32px;
+            color: #0b0b0b;
+            margin-bottom: 30px;
+        }
 
-.main-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+        .main-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
 
-.main-content ul {
-    list-style-type: disc;
-    margin-left: 40px;
-}
+        .main-content ul {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
 
-.main-content ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+        .main-content ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-.main-content h3 {
-    font-size: 26px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-}
+        .main-content h3 {
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
 
-/* Footer Section */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-    margin-top: 40px;
-}
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
 
-.footer p {
-    font-size: 16px;
-}
+        .footer p {
+            font-size: 16px;
+        }
 
-.footer a {
-    color: #f4f4f4;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.footer a:hover {
-    color: #ff8c00;
-}
+        .footer a:hover {
+            color: #ff8c00;
+        }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    header nav ul li {
-        margin: 10px 0;
-    }
+            header nav ul li {
+                margin: 10px 0;
+            }
 
-    .hero {
-        padding: 60px 20px;
-    }
+            .hero {
+                padding: 60px 20px;
+            }
 
-    .hero h1 {
-        font-size: 36px;
-    }
+            .hero h1 {
+                font-size: 36px;
+            }
 
-    .main-content h2 {
-        font-size: 28px;
-    }
+            .main-content h2 {
+                font-size: 28px;
+            }
 
-    .main-content p, .main-content ul li {
-        font-size: 16px;
-    }
+            .main-content p,
+            .main-content ul li {
+                font-size: 16px;
+            }
 
-    .footer p {
-        font-size: 14px;
-    }
-}
+            .footer p {
+                font-size: 14px;
+            }
+        }
 
-/* Larger Screens */
-@media (min-width: 1200px) {
-    .hero {
-        padding: 100px 0;
-    }
+        /* Larger Screens */
+        @media (min-width: 1200px) {
+            .hero {
+                padding: 100px 0;
+            }
 
-    .hero h1 {
-        font-size: 60px;
-    }
+            .hero h1 {
+                font-size: 60px;
+            }
 
-    .main-content h2 {
-        font-size: 36px;
-    }
+            .main-content h2 {
+                font-size: 36px;
+            }
 
-    .main-content ul li {
-        font-size: 20px;
-    }
+            .main-content ul li {
+                font-size: 20px;
+            }
 
-    .footer p {
-        font-size: 18px;
-    }
-}
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+            .footer p {
+                font-size: 18px;
+            }
+        }
 
-    header nav ul li {
-        margin: 10px 0;
-    }
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .hero {
-        padding: 60px 20px;
-    }
+            header nav ul li {
+                margin: 10px 0;
+            }
 
-    .hero h1 {
-        font-size: 36px;
-    }
+            .hero {
+                padding: 60px 20px;
+            }
 
-    .main-content h2 {
-        font-size: 28px;
-    }
+            .hero h1 {
+                font-size: 36px;
+            }
 
-    .main-content p, .main-content ul li {
-        font-size: 16px;
-    }
+            .main-content h2 {
+                font-size: 28px;
+            }
 
-    .footer p {
-        font-size: 14px;
-    }
-}
-.blog-image {
-    width: 70%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+            .main-content p,
+            .main-content ul li {
+                font-size: 16px;
+            }
 
+            .footer p {
+                font-size: 14px;
+            }
+        }
+
+        .blog-image {
+            width: 70%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
 <body>
 
-    
+
 
     <section class="hero">
         <div class="hero-content">
@@ -262,8 +268,8 @@ header nav ul li a:hover {
             <p>Crafting Curiosity, Shaping Dreams</p>
         </div>
         <div class="blog-image-container">
-            
-            <img href = "#" src="/assets/images/Project Gallery/soodinfra.webp" class="blog-image">
+
+            <img href="#" src="/assets/images/Project Gallery/soodinfra.webp" class="blog-image">
         </div>
     </section>
 

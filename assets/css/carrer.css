@@ -330,6 +330,7 @@ section {
     padding: 60px 20px;
     background: #f8f8f8;
     text-align: center;
+
 }
 
 #application-form h2 {
@@ -338,6 +339,9 @@ section {
     color: #333;
 }
 
+#application-form p {
+    text-align: justify;
+}
 #apply-form {
     max-width: 700px;
     margin: 0 auto;

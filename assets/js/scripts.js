@@ -21,9 +21,8 @@ function showNextSlide() {
     slides[currentSlide].classList.add('active');
 }
 
-// Initialize the first slide
 slides[currentSlide].classList.add('active');
-setInterval(showNextSlide, 4000); // Change every 4s
+setInterval(showNextSlide, 4000);
 
 
 const pastProjects = [

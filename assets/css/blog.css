@@ -150,11 +150,13 @@ body {
 }
 
 /* Blog Cards Grid */
+/* Blog Cards Grid */
 .blog-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 2fr));
-  /* height: 800px; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Adjusted minmax for better responsiveness */
   gap: 20px;
+  /* Removed height: 800px; */
 }
 
 /* Blog Card Styling */
@@ -164,6 +166,10 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  /* Use flexbox for internal layout */
+  flex-direction: column;
+  /* Stack image and content vertically */
 }
 
 .blog-card:hover {
@@ -173,11 +179,21 @@ body {
 
 .blog-image {
   position: relative;
+  width: 90%;
+  /* Make image container take full width */
+  height: 200px;
+  /* Set a fixed height for the image container */
+  overflow: hidden;
+  /* Hide overflow if image is larger */
 }
 
 .blog-image img {
-  width:50%;
-  height: 50%;
+  width: 100%;
+  /* Make image take full width of container */
+  height: 100%;
+  /* Make image take full height of container */
+  object-fit: cover;
+  /* Crop image to cover the container while maintaining aspect ratio */
 }
 
 .blog-label {
@@ -189,11 +205,20 @@ body {
   padding: 5px 10px;
   font-size: 0.8rem;
   border-radius: 5px;
+  z-index: 1;
+  /* Ensure label is above image */
 }
 
 .blog-content {
   padding: 20px;
   text-align: left;
+  flex-grow: 1;
+  /* Allow content to grow and fill space */
+  display: flex;
+  /* Use flexbox for content alignment */
+  flex-direction: column;
+  justify-content: space-between;
+  /* Distribute space between elements */
 }
 
 .blog-title {
@@ -212,6 +237,8 @@ body {
   font-size: 1rem;
   color: #555;
   margin-bottom: 20px;
+  flex-grow: 1;
+  /* Allow excerpt to grow */
 }
 
 .read-more {
@@ -223,11 +250,16 @@ body {
   font-size: 1rem;
   border-radius: 5px;
   transition: background 0.3s ease;
+  align-self: flex-start;
+  /* Align button to the start */
 }
 
 .read-more:hover {
   background-color: #2789a4;
 }
+
+/* Responsive Design */
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -261,13 +293,13 @@ body {
     opacity: 0.9;
     margin-bottom: 20px;
   }
-  .blog-container {
-    grid-template-columns: 1fr;
-  }
+.blog-container {
+  grid-template-columns: 1fr;
+}
 
-  .filter-btn {
-    margin-bottom: 10px;
-  }
+.filter-btn {
+  margin-bottom: 10px;
+}
 }
 
 
@@ -285,7 +317,8 @@ body {
   }
 
   .blog-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Adjusted minmax */
   }
 
   .blog-content h3 {
@@ -312,9 +345,11 @@ body {
     font-size: 0.9rem;
   }
 
-  .blog-card img {
-    height: 150px; /* Reduce image size for smaller screens */
+  .blog-image {
+    height: 180px;
+    /* Adjust image height for smaller screens */
   }
+
 
   .blog-content {
     padding: 15px;
@@ -338,7 +373,6 @@ body {
     font-size: 0.8rem;
   }
 }
-
 
 
 /* News Section */

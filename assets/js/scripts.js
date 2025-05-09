@@ -12,17 +12,43 @@
 // Toggle the mobile menu
 // Toggle the mobile menu
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+let currentDesktopSlide = 0;
+let currentMobileSlide = 0;
 
-function showNextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
+// Select desktop and mobile slides separately
+const desktopSlides = document.querySelectorAll('.hero-slideshow .slide');
+const mobileSlides = document.querySelectorAll('.hero-slideshow-mobile .slide');
+
+// Initialize first slides
+if (desktopSlides.length > 0) {
+    desktopSlides[currentDesktopSlide].classList.add('active');
 }
 
-slides[currentSlide].classList.add('active');
-setInterval(showNextSlide, 4000);
+if (mobileSlides.length > 0) {
+    mobileSlides[currentMobileSlide].classList.add('active');
+}
+
+// Slide functions
+function showNextDesktopSlide() {
+    desktopSlides[currentDesktopSlide].classList.remove('active');
+    currentDesktopSlide = (currentDesktopSlide + 1) % desktopSlides.length;
+    desktopSlides[currentDesktopSlide].classList.add('active');
+}
+
+function showNextMobileSlide() {
+    mobileSlides[currentMobileSlide].classList.remove('active');
+    currentMobileSlide = (currentMobileSlide + 1) % mobileSlides.length;
+    mobileSlides[currentMobileSlide].classList.add('active');
+}
+
+// Intervals (only run if slides exist)
+if (desktopSlides.length > 0) {
+    setInterval(showNextDesktopSlide, 4000);
+}
+
+if (mobileSlides.length > 0) {
+    setInterval(showNextMobileSlide, 4000);
+}
 
 
 const pastProjects = [

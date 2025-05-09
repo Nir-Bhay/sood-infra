@@ -24,45 +24,58 @@ body {
 }
 
 /* General Styles for .hero */
-
+/* MAIN HERO WRAPPER */
 .hero {
     position: relative;
-    height: 100vh;
+    margin-top: 8vh;
+    /* Space for fixed navbar */
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-}
-
-.hero-slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    /* background-color: red; */
     z-index: 0;
 }
 
+/* DESKTOP & MOBILE SLIDESHOW BASE */
+.hero-slideshow,
+.hero-slideshow-mobile {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* background-color: rebeccapurple; */
+}
+
+/* DEFAULT MOBILE SLIDESHOW HIDDEN */
+.hero-slideshow-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* INDIVIDUAL SLIDE */
 .slide {
     position: absolute;
-    top: 10%;
-    left: 0;
+    top: 5%;
+    /* left: 5%; */
     width: 100%;
-    height: 90%;
+    height: 95%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 100% 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
+/* ACTIVE SLIDE */
 .slide.active {
     opacity: 1;
 }
 
-/* For better mobile image clarity */
-
+/* LAST SLIDE BUTTON */
 .last-slide .read-more-btn {
     position: absolute;
     bottom: 30px;
@@ -81,16 +94,18 @@ body {
     display: inline-block;
 }
 
-/* Mobile Optimizations */
+/* RESPONSIVE: TABLET & MOBILE */
 @media (max-width: 768px) {
-    
     .hero {
         height: 40vh;
     }
 
     .slide {
         top: 0;
-        
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
     }
 
     .last-slide .read-more-btn {
@@ -98,6 +113,27 @@ body {
         font-size: 14px;
         bottom: 20px;
     }
+
+    .hero-slideshow {
+        display: none;
+    }
+
+    .hero-slideshow-mobile {
+        display: block;
+    }
+
+    .hero-slideshow-mobile .slide {
+        top: 0;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+        .hero-slideshow-mobile .slide {
+            /* background-size: contain; */
+            /* or 'cover' if you want it to fill */
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
 }
 
 @media (max-width: 480px) {
@@ -126,7 +162,50 @@ body {
         min-height: 60vh;
     }
 } */
+/* LAST SLIDE BUTTON */
+.last-slide .read-more-btn {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    /* Change to your primary color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+    /* Hide by default */
+    opacity: 0;
+    /* Ensure it's initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 177;
+    /* Make sure the button stays above other content */
+}
 
+/* Make it visible when hovering over the last slide */
+.last-slide:hover .read-more-btn {
+    display: inline-block;
+    /* opacity: 1; */
+}
+
+
+/* Button Styling for Different Screen Sizes */
+@media (max-width: 768px) {
+    .last-slide .read-more-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .last-slide .read-more-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+        bottom: 15px;
+    }
+}
 
 
 

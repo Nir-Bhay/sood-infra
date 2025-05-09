@@ -83,15 +83,14 @@ body {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
+    
     .hero {
-        height: 70vh;
+        height: 40vh;
     }
 
     .slide {
         top: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        
     }
 
     .last-slide .read-more-btn {
@@ -103,7 +102,7 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        height: 60vh;
+        height: auto;
     }
 
     .last-slide .read-more-btn {
@@ -112,21 +111,21 @@ body {
         bottom: 15px;
     }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .slide {
         background-size: contain;
-        /* This is the main fix */
+       
         background-position: center;
         background-repeat: no-repeat;
         background-color: #151B54;
-        /* Fallback to give a clean background if image doesn't fill */
+      
     }
 
     .hero {
         height: auto;
         min-height: 60vh;
     }
-}
+} */
 
 
 

@@ -1,15 +1,15 @@
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    background-color: #151B54;
     color: #333;
-    background: #151B54;
-    /* Dark Blue */
 }
 
 :root {
@@ -22,96 +22,54 @@ body {
     --text-color: #333;
     --highlight-color: #4a90e2;
 }
-
-/* General Styles for .hero */
-/* MAIN HERO WRAPPER */
+/* Hero Section */
 .hero {
     position: relative;
-    margin-top: 8vh;
-    /* Space for fixed navbar */
-    height: 92vh;
+    margin-top: 10vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    /* background-color: red; */
     z-index: 0;
 }
 
-/* DESKTOP & MOBILE SLIDESHOW BASE */
-.hero-slideshow,
-.hero-slideshow-mobile {
+.hero-slideshow {
     width: 100%;
     height: 100%;
-    z-index: 0;
-    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-/* DEFAULT MOBILE SLIDESHOW HIDDEN */
-.hero-slideshow-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* INDIVIDUAL SLIDE */
 .slide {
     position: absolute;
-    top: 5%;
-    /* left: 5%; */
     width: 100%;
-    height: 95%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-    opacity: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: opacity 1s ease-in-out;
 }
 
-/* ACTIVE SLIDE */
-.slide.active {
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    opacity: 0;
+}
+
+.slide.active img {
     opacity: 1;
 }
 
-/* LAST SLIDE BUTTON */
-.last-slide .read-more-btn {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: none;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.last-slide:hover .read-more-btn {
-    display: inline-block;
-}
-
-/* RESPONSIVE: TABLET & MOBILE */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .hero {
         height: 40vh;
-    }
-
-    .slide {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-    }
-
-    .last-slide .read-more-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-        bottom: 20px;
+        /* Adjusted height for mobile */
     }
 
     .hero-slideshow {
@@ -122,88 +80,81 @@ body {
         display: block;
     }
 
-    .hero-slideshow-mobile .slide {
-        top: 0;
+    .hero-slideshow-mobile .slide img {
+        object-fit: cover;
+        width: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-        .hero-slideshow-mobile .slide {
-            /* background-size: contain; */
-            /* or 'cover' if you want it to fill */
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        height: auto;
-    }
-
-    .last-slide .read-more-btn {
-        padding: 6px 14px;
-        font-size: 13px;
-        bottom: 15px;
     }
 }
-/* @media (max-width: 768px) {
-    .slide {
-        background-size: contain;
-       
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #151B54;
-      
-    }
 
-    .hero {
-        height: auto;
-        min-height: 60vh;
-    }
-} */
-/* LAST SLIDE BUTTON */
+/* Button Styling */
 .last-slide .read-more-btn {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--primary-color);
-    /* Change to your primary color */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     display: none;
-    /* Hide by default */
     opacity: 0;
-    /* Ensure it's initially hidden */
     transition: opacity 0.3s ease-in-out;
     z-index: 177;
-    /* Make sure the button stays above other content */
 }
 
-/* Make it visible when hovering over the last slide */
 .last-slide:hover .read-more-btn {
     display: inline-block;
-    /* opacity: 1; */
-}
-
-
-/* Button Styling for Different Screen Sizes */
-@media (max-width: 768px) {
-    .last-slide .read-more-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-        bottom: 20px;
-    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        height: auto;
+    }
+
     .last-slide .read-more-btn {
         padding: 6px 14px;
         font-size: 13px;
         bottom: 15px;
+    }
+}
+
+.hero-slideshow-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slideshow-mobile .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slideshow-mobile .slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slideshow-mobile .slide.active img {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-slideshow-mobile {
+        display: block;
+    }
+
+    .hero-slideshow {
+        display: none;
     }
 }
 

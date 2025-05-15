@@ -64,14 +64,20 @@ body {
 }
 
 .blog-image-container {
-    text-align: center;
+    text-align: justify;
     margin-bottom: 20px;
 }
-
+.imagee{
+    text-align: center;
+}
 .blog-image {
+    margin-top: 20px;
     width: 60%;
     max-width: 400px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

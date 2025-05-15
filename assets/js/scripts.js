@@ -1,16 +1,3 @@
-// // Select the menu toggle button and navigation menu
-// const menuToggle = document.querySelector('.menu-toggle');
-// const navMenu = document.querySelector('.nav-menu');
-
-// // Add click event listener to the toggle button
-// menuToggle.addEventListener('click', () => {
-//     navMenu.classList.toggle('active'); // Toggle the active class on the navigation menu
-// });
-
-// Toggle the mobile menu
-// Toggle the mobile menu
-// Toggle the mobile menu
-// Toggle the mobile menu
 
 let currentDesktopSlide = 0;
 let currentMobileSlide = 0;

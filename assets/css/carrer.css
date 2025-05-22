@@ -330,121 +330,53 @@ section {
     padding: 60px 20px;
     background: #f8f8f8;
     text-align: center;
-
 }
 
 #application-form h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #121744;
 }
 
 #application-form p {
     text-align: justify;
-}
-#apply-form {
-    max-width: 700px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    text-align: justify;
-}
-
-#apply-form label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
     color: #333;
 }
 
-#apply-form input,
-#apply-form select,
-#apply-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s;
-}
-
-#apply-form input:focus,
-#apply-form select:focus,
-#apply-form textarea:focus {
-    border-color: #151B54;
-}
-
-#apply-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-#apply-form button {
-    background-color: #151B54;
-    color: #fff;
-    padding: 15px 20px;
+.google-form-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(145deg, #121744, #1e1e56);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
     border: none;
-    border-radius: 4px;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(18, 23, 68, 0.3), 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-#apply-form button:hover {
-    background-color: rgb(19, 102, 191);
-    transform: scale(1.05);
-}
-
-/* Form Animation */
-#apply-form::before,
-#apply-form::after {
-    content: '';
+.google-form-btn::before {
+    content: "";
     position: absolute;
-    width: 300%;
-    height: 300%;
-    top: 50%;
-    left: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
-    z-index: 0;
-    pointer-events: none;
-    animation: pulse 3s infinite ease-in-out;
-    border-radius: 50%;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-45deg);
+    transition: all 0.5s ease;
 }
 
-#apply-form::before {
-    animation-delay: 1.5s;
+.google-form-btn:hover::before {
+    left: 120%;
 }
 
-@keyframes pulse {
-    0%,
-    100% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.6;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    header{
-        margin-top: 10%;
-    }
-    header h1 {margin-top: 30px;}
-        #apply-form {
-        padding: 20px;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
+.google-form-btn:hover {
+    background: linear-gradient(145deg, #1a1a5a, #2a2a80);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(18, 23, 68, 0.4), 0 6px 12px rgba(0, 0, 0, 0.15);
 }

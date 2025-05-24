@@ -38,6 +38,34 @@ if (mobileSlides.length > 0) {
 }
 
 
+function showNextDesktopSlide() {
+    desktopSlides[currentDesktopSlide].classList.remove('active');
+    desktopSlides[currentDesktopSlide].classList.add('fade-out');
+
+    const prevSlide = currentDesktopSlide;
+    currentDesktopSlide = (currentDesktopSlide + 1) % desktopSlides.length;
+
+    desktopSlides[currentDesktopSlide].classList.add('active');
+
+    setTimeout(() => {
+        desktopSlides[prevSlide].classList.remove('fade-out');
+    }, 800); // match the fade-out duration
+}
+
+function showNextMobileSlide() {
+    mobileSlides[currentMobileSlide].classList.remove('active');
+    mobileSlides[currentMobileSlide].classList.add('fade-out');
+
+    const prevSlide = currentMobileSlide;
+    currentMobileSlide = (currentMobileSlide + 1) % mobileSlides.length;
+
+    mobileSlides[currentMobileSlide].classList.add('active');
+
+    setTimeout(() => {
+        mobileSlides[prevSlide].classList.remove('fade-out');
+    }, 800);
+}
+
 const pastProjects = [
     {
         title: "Shri Naveen Chambers",
